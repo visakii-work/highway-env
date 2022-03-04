@@ -3,7 +3,7 @@ from gym import GoalEnv
 import numpy as np
 
 from highway_env.envs.common.abstract import AbstractEnv
-from highway_env.envs.common.observation import MultiAgentObservation
+from highway_env.envs.common.observation import MultiAgentObservation, observation_factory
 from highway_env.road.lane import StraightLane, LineType
 from highway_env.road.road import Road, RoadNetwork
 from highway_env.vehicle.objects import Landmark
@@ -18,6 +18,20 @@ class ParkingEnv(AbstractEnv, GoalEnv):
 
     Credits to Munir Jojo-Verge for the idea and initial implementation.
     """
+
+    # For parking env with GrayscaleObservation, the env need
+    # this PARKING_OBS to calculate the reward and the info.
+    # Bug fixed by Mcfly(https://github.com/McflyWZX)
+    PARKING_OBS = {"observation": {
+            "type": "KinematicsGoal",
+            "features": ['x', 'y', 'vx', 'vy', 'cos_h', 'sin_h'],
+            "scales": [100, 100, 5, 5, 1, 1],
+            "normalize": False
+        }}
+
+    def __init__(self, config: dict = None) -> None:
+        super().__init__(config)
+        self.observation_type_parking = None
 
     @classmethod
     def default_config(cls) -> dict:
@@ -47,11 +61,19 @@ class ParkingEnv(AbstractEnv, GoalEnv):
         })
         return config
 
+    def define_spaces(self) -> None:
+        """
+        Set the types and spaces of observation and action from config.
+        """
+        super().define_spaces()
+        self.observation_type_parking = observation_factory(self, self.PARKING_OBS["observation"])
+
     def _info(self, obs, action) -> dict:
         info = super(ParkingEnv, self)._info(obs, action)
         if isinstance(self.observation_type, MultiAgentObservation):
             success = tuple(self._is_success(agent_obs['achieved_goal'], agent_obs['desired_goal']) for agent_obs in obs)
         else:
+            obs = self.observation_type_parking.observe()
             success = self._is_success(obs['achieved_goal'], obs['desired_goal'])
         info.update({"is_success": success})
         return info
@@ -108,7 +130,7 @@ class ParkingEnv(AbstractEnv, GoalEnv):
         return -np.power(np.dot(np.abs(achieved_goal - desired_goal), np.array(self.config["reward_weights"])), p)
 
     def _reward(self, action: np.ndarray) -> float:
-        obs = self.observation_type.observe()
+        obs = self.observation_type_parking.observe()
         obs = obs if isinstance(obs, tuple) else (obs,)
         return sum(self.compute_reward(agent_obs['achieved_goal'], agent_obs['desired_goal'], {})
                      for agent_obs in obs)
@@ -120,7 +142,7 @@ class ParkingEnv(AbstractEnv, GoalEnv):
         """The episode is over if the ego vehicle crashed or the goal is reached."""
         time = self.steps >= self.config["duration"]
         crashed = any(vehicle.crashed for vehicle in self.controlled_vehicles)
-        obs = self.observation_type.observe()
+        obs = self.observation_type_parking.observe()
         obs = obs if isinstance(obs, tuple) else (obs,)
         success = all(self._is_success(agent_obs['achieved_goal'], agent_obs['desired_goal']) for agent_obs in obs)
         return time or crashed or success

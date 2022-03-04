@@ -1,0 +1,1480 @@
+2022-02-28 17:51:48,676 INFO    MainThread:67052 [internal.py:wandb_internal():89] W&B internal server running at pid: 67052, started at: 2022-02-28 17:51:48.675695
+2022-02-28 17:51:48,677 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: check_version
+2022-02-28 17:51:48,678 INFO    WriterThread:67052 [datastore.py:open_for_write():77] open: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/run-3ntd2esp.wandb
+2022-02-28 17:51:48,680 DEBUG   SenderThread:67052 [sender.py:send():235] send: header
+2022-02-28 17:51:48,680 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: check_version
+2022-02-28 17:51:48,788 DEBUG   SenderThread:67052 [sender.py:send():235] send: run
+2022-02-28 17:51:48,910 INFO    SenderThread:67052 [dir_watcher.py:__init__():169] watching files in: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files
+2022-02-28 17:51:48,910 INFO    SenderThread:67052 [sender.py:_start_run_threads():809] run started: 3ntd2esp with start time 1646099508
+2022-02-28 17:51:48,910 DEBUG   SenderThread:67052 [sender.py:send():235] send: summary
+2022-02-28 17:51:48,911 INFO    SenderThread:67052 [sender.py:_save_file():944] saving file wandb-summary.json with policy end
+2022-02-28 17:51:48,912 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: run_start
+2022-02-28 17:51:48,914 DEBUG   HandlerThread:67052 [meta.py:__init__():36] meta init
+2022-02-28 17:51:48,914 DEBUG   HandlerThread:67052 [meta.py:__init__():50] meta init done
+2022-02-28 17:51:48,914 DEBUG   HandlerThread:67052 [meta.py:probe():210] probe
+2022-02-28 17:51:48,920 DEBUG   HandlerThread:67052 [meta.py:_setup_git():200] setup git
+2022-02-28 17:51:48,973 DEBUG   HandlerThread:67052 [meta.py:_setup_git():207] setup git done
+2022-02-28 17:51:48,974 DEBUG   HandlerThread:67052 [meta.py:_save_pip():54] save pip
+2022-02-28 17:51:48,975 DEBUG   HandlerThread:67052 [meta.py:_save_pip():68] save pip done
+2022-02-28 17:51:48,975 DEBUG   HandlerThread:67052 [meta.py:probe():248] probe done
+2022-02-28 17:51:49,017 DEBUG   SenderThread:67052 [sender.py:send():235] send: files
+2022-02-28 17:51:49,018 INFO    SenderThread:67052 [sender.py:_save_file():944] saving file wandb-metadata.json with policy now
+2022-02-28 17:51:49,025 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 17:51:49,025 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 17:51:49,644 INFO    Thread-11 :67052 [upload_job.py:push():137] Uploaded file /var/folders/3d/8qgdr4hx35v7qrcywjzlsygr0000gq/T/tmpa5ef_8iewandb/1d97vvxl-wandb-metadata.json
+2022-02-28 17:51:49,917 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_created():217] file/dir created: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/wandb-summary.json
+2022-02-28 17:51:49,917 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_created():217] file/dir created: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/requirements.txt
+2022-02-28 17:51:49,917 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_created():217] file/dir created: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/wandb-metadata.json
+2022-02-28 17:51:49,917 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_created():217] file/dir created: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/output.log
+2022-02-28 17:52:04,125 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 17:52:04,126 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 17:52:17,976 DEBUG   SenderThread:67052 [sender.py:send():235] send: stats
+2022-02-28 17:52:19,249 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 17:52:19,250 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 17:52:23,098 DEBUG   SenderThread:67052 [sender.py:send():235] send: history
+2022-02-28 17:52:23,099 DEBUG   SenderThread:67052 [sender.py:send():235] send: summary
+2022-02-28 17:52:23,101 INFO    SenderThread:67052 [sender.py:_save_file():944] saving file wandb-summary.json with policy end
+2022-02-28 17:52:24,049 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/wandb-summary.json
+2022-02-28 17:52:26,052 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/output.log
+2022-02-28 17:52:34,491 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 17:52:34,491 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 17:52:49,039 DEBUG   SenderThread:67052 [sender.py:send():235] send: stats
+2022-02-28 17:52:49,604 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 17:52:49,604 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 17:53:04,734 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 17:53:04,734 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 17:53:10,549 DEBUG   SenderThread:67052 [sender.py:send():235] send: history
+2022-02-28 17:53:10,550 DEBUG   SenderThread:67052 [sender.py:send():235] send: summary
+2022-02-28 17:53:10,553 INFO    SenderThread:67052 [sender.py:_save_file():944] saving file wandb-summary.json with policy end
+2022-02-28 17:53:11,222 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/wandb-summary.json
+2022-02-28 17:53:11,222 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/output.log
+2022-02-28 17:53:19,848 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 17:53:19,848 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 17:53:20,040 DEBUG   SenderThread:67052 [sender.py:send():235] send: stats
+2022-02-28 17:53:35,016 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 17:53:35,017 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 17:53:49,096 DEBUG   SenderThread:67052 [sender.py:send():235] send: history
+2022-02-28 17:53:49,097 DEBUG   SenderThread:67052 [sender.py:send():235] send: summary
+2022-02-28 17:53:49,099 INFO    SenderThread:67052 [sender.py:_save_file():944] saving file wandb-summary.json with policy end
+2022-02-28 17:53:49,365 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/wandb-summary.json
+2022-02-28 17:53:50,125 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 17:53:50,126 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 17:53:51,005 DEBUG   SenderThread:67052 [sender.py:send():235] send: stats
+2022-02-28 17:53:51,370 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/output.log
+2022-02-28 17:54:05,224 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 17:54:05,225 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 17:54:20,332 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 17:54:20,332 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 17:54:21,933 DEBUG   SenderThread:67052 [sender.py:send():235] send: stats
+2022-02-28 17:54:21,994 DEBUG   SenderThread:67052 [sender.py:send():235] send: history
+2022-02-28 17:54:21,995 DEBUG   SenderThread:67052 [sender.py:send():235] send: summary
+2022-02-28 17:54:21,995 INFO    SenderThread:67052 [sender.py:_save_file():944] saving file wandb-summary.json with policy end
+2022-02-28 17:54:22,479 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/wandb-summary.json
+2022-02-28 17:54:23,484 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/output.log
+2022-02-28 17:54:35,441 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 17:54:35,442 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 17:54:50,540 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 17:54:50,540 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 17:54:51,798 DEBUG   SenderThread:67052 [sender.py:send():235] send: history
+2022-02-28 17:54:51,798 DEBUG   SenderThread:67052 [sender.py:send():235] send: summary
+2022-02-28 17:54:51,800 INFO    SenderThread:67052 [sender.py:_save_file():944] saving file wandb-summary.json with policy end
+2022-02-28 17:54:52,580 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/wandb-summary.json
+2022-02-28 17:54:52,853 DEBUG   SenderThread:67052 [sender.py:send():235] send: stats
+2022-02-28 17:54:53,583 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/output.log
+2022-02-28 17:55:05,655 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 17:55:05,656 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 17:55:20,776 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 17:55:20,776 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 17:55:22,872 DEBUG   SenderThread:67052 [sender.py:send():235] send: history
+2022-02-28 17:55:22,873 DEBUG   SenderThread:67052 [sender.py:send():235] send: summary
+2022-02-28 17:55:22,874 INFO    SenderThread:67052 [sender.py:_save_file():944] saving file wandb-summary.json with policy end
+2022-02-28 17:55:23,672 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/wandb-summary.json
+2022-02-28 17:55:23,672 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/output.log
+2022-02-28 17:55:23,892 DEBUG   SenderThread:67052 [sender.py:send():235] send: stats
+2022-02-28 17:55:35,885 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 17:55:35,886 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 17:55:51,436 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 17:55:51,436 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 17:55:54,273 DEBUG   SenderThread:67052 [sender.py:send():235] send: history
+2022-02-28 17:55:54,274 DEBUG   SenderThread:67052 [sender.py:send():235] send: summary
+2022-02-28 17:55:54,275 INFO    SenderThread:67052 [sender.py:_save_file():944] saving file wandb-summary.json with policy end
+2022-02-28 17:55:54,790 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/wandb-summary.json
+2022-02-28 17:55:54,964 DEBUG   SenderThread:67052 [sender.py:send():235] send: stats
+2022-02-28 17:55:55,795 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/output.log
+2022-02-28 17:56:06,538 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 17:56:06,538 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 17:56:21,656 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 17:56:21,656 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 17:56:23,621 DEBUG   SenderThread:67052 [sender.py:send():235] send: history
+2022-02-28 17:56:23,621 DEBUG   SenderThread:67052 [sender.py:send():235] send: summary
+2022-02-28 17:56:23,622 INFO    SenderThread:67052 [sender.py:_save_file():944] saving file wandb-summary.json with policy end
+2022-02-28 17:56:23,886 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/wandb-summary.json
+2022-02-28 17:56:25,894 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/output.log
+2022-02-28 17:56:26,048 DEBUG   SenderThread:67052 [sender.py:send():235] send: stats
+2022-02-28 17:56:36,755 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 17:56:36,755 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 17:56:51,851 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 17:56:51,852 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 17:56:53,580 DEBUG   SenderThread:67052 [sender.py:send():235] send: history
+2022-02-28 17:56:53,580 DEBUG   SenderThread:67052 [sender.py:send():235] send: summary
+2022-02-28 17:56:53,581 INFO    SenderThread:67052 [sender.py:_save_file():944] saving file wandb-summary.json with policy end
+2022-02-28 17:56:54,023 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/wandb-summary.json
+2022-02-28 17:56:56,032 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/output.log
+2022-02-28 17:56:57,036 DEBUG   SenderThread:67052 [sender.py:send():235] send: stats
+2022-02-28 17:57:06,944 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 17:57:06,945 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 17:57:22,049 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 17:57:22,049 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 17:57:23,346 DEBUG   SenderThread:67052 [sender.py:send():235] send: history
+2022-02-28 17:57:23,347 DEBUG   SenderThread:67052 [sender.py:send():235] send: summary
+2022-02-28 17:57:23,348 INFO    SenderThread:67052 [sender.py:_save_file():944] saving file wandb-summary.json with policy end
+2022-02-28 17:57:24,137 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/wandb-summary.json
+2022-02-28 17:57:26,144 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/output.log
+2022-02-28 17:57:27,933 DEBUG   SenderThread:67052 [sender.py:send():235] send: stats
+2022-02-28 17:57:37,144 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 17:57:37,145 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 17:57:52,247 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 17:57:52,247 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 17:57:52,588 DEBUG   SenderThread:67052 [sender.py:send():235] send: history
+2022-02-28 17:57:52,588 DEBUG   SenderThread:67052 [sender.py:send():235] send: summary
+2022-02-28 17:57:52,588 INFO    SenderThread:67052 [sender.py:_save_file():944] saving file wandb-summary.json with policy end
+2022-02-28 17:57:53,242 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/wandb-summary.json
+2022-02-28 17:57:54,244 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/output.log
+2022-02-28 17:57:58,867 DEBUG   SenderThread:67052 [sender.py:send():235] send: stats
+2022-02-28 17:58:07,341 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 17:58:07,341 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 17:58:20,522 DEBUG   SenderThread:67052 [sender.py:send():235] send: history
+2022-02-28 17:58:20,522 DEBUG   SenderThread:67052 [sender.py:send():235] send: summary
+2022-02-28 17:58:20,523 INFO    SenderThread:67052 [sender.py:_save_file():944] saving file wandb-summary.json with policy end
+2022-02-28 17:58:21,336 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/wandb-summary.json
+2022-02-28 17:58:22,338 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/output.log
+2022-02-28 17:58:22,445 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 17:58:22,445 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 17:58:29,705 DEBUG   SenderThread:67052 [sender.py:send():235] send: stats
+2022-02-28 17:58:37,545 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 17:58:37,546 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 17:58:47,261 DEBUG   SenderThread:67052 [sender.py:send():235] send: history
+2022-02-28 17:58:47,261 DEBUG   SenderThread:67052 [sender.py:send():235] send: summary
+2022-02-28 17:58:47,262 INFO    SenderThread:67052 [sender.py:_save_file():944] saving file wandb-summary.json with policy end
+2022-02-28 17:58:47,426 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/wandb-summary.json
+2022-02-28 17:58:48,429 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/output.log
+2022-02-28 17:58:52,644 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 17:58:52,644 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 17:59:00,703 DEBUG   SenderThread:67052 [sender.py:send():235] send: stats
+2022-02-28 17:59:07,742 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 17:59:07,743 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 17:59:12,267 DEBUG   SenderThread:67052 [sender.py:send():235] send: history
+2022-02-28 17:59:12,268 DEBUG   SenderThread:67052 [sender.py:send():235] send: summary
+2022-02-28 17:59:12,268 INFO    SenderThread:67052 [sender.py:_save_file():944] saving file wandb-summary.json with policy end
+2022-02-28 17:59:12,515 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/wandb-summary.json
+2022-02-28 17:59:14,522 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/output.log
+2022-02-28 17:59:22,842 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 17:59:22,842 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 17:59:31,750 DEBUG   SenderThread:67052 [sender.py:send():235] send: stats
+2022-02-28 17:59:37,937 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 17:59:37,937 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 17:59:40,332 DEBUG   SenderThread:67052 [sender.py:send():235] send: history
+2022-02-28 17:59:40,332 DEBUG   SenderThread:67052 [sender.py:send():235] send: summary
+2022-02-28 17:59:40,333 INFO    SenderThread:67052 [sender.py:_save_file():944] saving file wandb-summary.json with policy end
+2022-02-28 17:59:40,607 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/wandb-summary.json
+2022-02-28 17:59:42,613 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/output.log
+2022-02-28 17:59:53,099 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 17:59:53,099 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:00:02,709 DEBUG   SenderThread:67052 [sender.py:send():235] send: stats
+2022-02-28 18:00:06,381 DEBUG   SenderThread:67052 [sender.py:send():235] send: history
+2022-02-28 18:00:06,381 DEBUG   SenderThread:67052 [sender.py:send():235] send: summary
+2022-02-28 18:00:06,382 INFO    SenderThread:67052 [sender.py:_save_file():944] saving file wandb-summary.json with policy end
+2022-02-28 18:00:06,704 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/wandb-summary.json
+2022-02-28 18:00:08,203 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:00:08,203 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:00:08,709 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/output.log
+2022-02-28 18:00:23,307 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:00:23,308 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:00:33,465 DEBUG   SenderThread:67052 [sender.py:send():235] send: history
+2022-02-28 18:00:33,465 DEBUG   SenderThread:67052 [sender.py:send():235] send: summary
+2022-02-28 18:00:33,467 INFO    SenderThread:67052 [sender.py:_save_file():944] saving file wandb-summary.json with policy end
+2022-02-28 18:00:33,533 DEBUG   SenderThread:67052 [sender.py:send():235] send: stats
+2022-02-28 18:00:33,787 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/wandb-summary.json
+2022-02-28 18:00:34,790 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/output.log
+2022-02-28 18:00:38,481 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:00:38,481 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:00:53,586 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:00:53,586 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:01:03,152 DEBUG   SenderThread:67052 [sender.py:send():235] send: history
+2022-02-28 18:01:03,153 DEBUG   SenderThread:67052 [sender.py:send():235] send: summary
+2022-02-28 18:01:03,153 INFO    SenderThread:67052 [sender.py:_save_file():944] saving file wandb-summary.json with policy end
+2022-02-28 18:01:03,891 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/wandb-summary.json
+2022-02-28 18:01:04,365 DEBUG   SenderThread:67052 [sender.py:send():235] send: stats
+2022-02-28 18:01:04,893 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/output.log
+2022-02-28 18:01:08,686 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:01:08,687 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:01:23,785 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:01:23,785 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:01:33,381 DEBUG   SenderThread:67052 [sender.py:send():235] send: history
+2022-02-28 18:01:33,381 DEBUG   SenderThread:67052 [sender.py:send():235] send: summary
+2022-02-28 18:01:33,382 INFO    SenderThread:67052 [sender.py:_save_file():944] saving file wandb-summary.json with policy end
+2022-02-28 18:01:33,986 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/wandb-summary.json
+2022-02-28 18:01:34,991 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/output.log
+2022-02-28 18:01:35,221 DEBUG   SenderThread:67052 [sender.py:send():235] send: stats
+2022-02-28 18:01:38,889 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:01:38,890 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:01:54,080 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:01:54,080 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:02:03,634 DEBUG   SenderThread:67052 [sender.py:send():235] send: history
+2022-02-28 18:02:03,634 DEBUG   SenderThread:67052 [sender.py:send():235] send: summary
+2022-02-28 18:02:03,635 INFO    SenderThread:67052 [sender.py:_save_file():944] saving file wandb-summary.json with policy end
+2022-02-28 18:02:04,096 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/wandb-summary.json
+2022-02-28 18:02:05,101 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/output.log
+2022-02-28 18:02:06,229 DEBUG   SenderThread:67052 [sender.py:send():235] send: stats
+2022-02-28 18:02:09,177 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:02:09,177 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:02:24,270 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:02:24,271 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:02:33,139 DEBUG   SenderThread:67052 [sender.py:send():235] send: history
+2022-02-28 18:02:33,139 DEBUG   SenderThread:67052 [sender.py:send():235] send: summary
+2022-02-28 18:02:33,139 INFO    SenderThread:67052 [sender.py:_save_file():944] saving file wandb-summary.json with policy end
+2022-02-28 18:02:33,218 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/wandb-summary.json
+2022-02-28 18:02:35,228 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/output.log
+2022-02-28 18:02:37,291 DEBUG   SenderThread:67052 [sender.py:send():235] send: stats
+2022-02-28 18:02:39,369 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:02:39,370 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:02:54,496 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:02:54,496 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:03:02,763 DEBUG   SenderThread:67052 [sender.py:send():235] send: history
+2022-02-28 18:03:02,763 DEBUG   SenderThread:67052 [sender.py:send():235] send: summary
+2022-02-28 18:03:02,764 INFO    SenderThread:67052 [sender.py:_save_file():944] saving file wandb-summary.json with policy end
+2022-02-28 18:03:03,344 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/wandb-summary.json
+2022-02-28 18:03:05,349 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/output.log
+2022-02-28 18:03:08,361 DEBUG   SenderThread:67052 [sender.py:send():235] send: stats
+2022-02-28 18:03:09,594 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:03:09,594 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:03:24,699 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:03:24,699 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:03:32,720 DEBUG   SenderThread:67052 [sender.py:send():235] send: history
+2022-02-28 18:03:32,720 DEBUG   SenderThread:67052 [sender.py:send():235] send: summary
+2022-02-28 18:03:32,721 INFO    SenderThread:67052 [sender.py:_save_file():944] saving file wandb-summary.json with policy end
+2022-02-28 18:03:33,451 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/wandb-summary.json
+2022-02-28 18:03:34,452 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/output.log
+2022-02-28 18:03:39,346 DEBUG   SenderThread:67052 [sender.py:send():235] send: stats
+2022-02-28 18:03:39,795 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:03:39,796 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:03:54,979 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:03:54,982 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:04:02,897 DEBUG   SenderThread:67052 [sender.py:send():235] send: history
+2022-02-28 18:04:02,897 DEBUG   SenderThread:67052 [sender.py:send():235] send: summary
+2022-02-28 18:04:02,898 INFO    SenderThread:67052 [sender.py:_save_file():944] saving file wandb-summary.json with policy end
+2022-02-28 18:04:03,564 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/wandb-summary.json
+2022-02-28 18:04:04,568 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/output.log
+2022-02-28 18:04:10,072 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:04:10,072 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:04:10,197 DEBUG   SenderThread:67052 [sender.py:send():235] send: stats
+2022-02-28 18:04:25,182 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:04:25,183 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:04:30,877 DEBUG   SenderThread:67052 [sender.py:send():235] send: history
+2022-02-28 18:04:30,877 DEBUG   SenderThread:67052 [sender.py:send():235] send: summary
+2022-02-28 18:04:30,878 INFO    SenderThread:67052 [sender.py:_save_file():944] saving file wandb-summary.json with policy end
+2022-02-28 18:04:31,656 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/wandb-summary.json
+2022-02-28 18:04:32,659 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/output.log
+2022-02-28 18:04:40,291 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:04:40,291 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:04:41,125 DEBUG   SenderThread:67052 [sender.py:send():235] send: stats
+2022-02-28 18:04:55,401 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:04:55,402 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:05:01,560 DEBUG   SenderThread:67052 [sender.py:send():235] send: history
+2022-02-28 18:05:01,560 DEBUG   SenderThread:67052 [sender.py:send():235] send: summary
+2022-02-28 18:05:01,561 INFO    SenderThread:67052 [sender.py:_save_file():944] saving file wandb-summary.json with policy end
+2022-02-28 18:05:01,782 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/wandb-summary.json
+2022-02-28 18:05:02,787 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/output.log
+2022-02-28 18:05:10,510 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:05:10,510 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:05:12,086 DEBUG   SenderThread:67052 [sender.py:send():235] send: stats
+2022-02-28 18:05:25,616 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:05:25,616 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:05:31,315 DEBUG   SenderThread:67052 [sender.py:send():235] send: history
+2022-02-28 18:05:31,315 DEBUG   SenderThread:67052 [sender.py:send():235] send: summary
+2022-02-28 18:05:31,316 INFO    SenderThread:67052 [sender.py:_save_file():944] saving file wandb-summary.json with policy end
+2022-02-28 18:05:31,897 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/wandb-summary.json
+2022-02-28 18:05:32,900 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/output.log
+2022-02-28 18:05:40,734 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:05:40,735 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:05:43,181 DEBUG   SenderThread:67052 [sender.py:send():235] send: stats
+2022-02-28 18:05:55,834 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:05:55,834 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:06:02,415 DEBUG   SenderThread:67052 [sender.py:send():235] send: history
+2022-02-28 18:06:02,415 DEBUG   SenderThread:67052 [sender.py:send():235] send: summary
+2022-02-28 18:06:02,416 INFO    SenderThread:67052 [sender.py:_save_file():944] saving file wandb-summary.json with policy end
+2022-02-28 18:06:03,005 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/wandb-summary.json
+2022-02-28 18:06:05,010 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/output.log
+2022-02-28 18:06:11,088 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:06:11,089 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:06:14,268 DEBUG   SenderThread:67052 [sender.py:send():235] send: stats
+2022-02-28 18:06:26,194 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:06:26,195 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:06:36,544 DEBUG   SenderThread:67052 [sender.py:send():235] send: history
+2022-02-28 18:06:36,544 DEBUG   SenderThread:67052 [sender.py:send():235] send: summary
+2022-02-28 18:06:36,545 INFO    SenderThread:67052 [sender.py:_save_file():944] saving file wandb-summary.json with policy end
+2022-02-28 18:06:37,118 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/wandb-summary.json
+2022-02-28 18:06:37,118 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/output.log
+2022-02-28 18:06:41,295 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:06:41,295 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:06:45,304 DEBUG   SenderThread:67052 [sender.py:send():235] send: stats
+2022-02-28 18:06:56,526 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:06:56,526 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:07:08,305 DEBUG   SenderThread:67052 [sender.py:send():235] send: history
+2022-02-28 18:07:08,305 DEBUG   SenderThread:67052 [sender.py:send():235] send: summary
+2022-02-28 18:07:08,306 INFO    SenderThread:67052 [sender.py:_save_file():944] saving file wandb-summary.json with policy end
+2022-02-28 18:07:09,227 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/wandb-summary.json
+2022-02-28 18:07:09,227 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/output.log
+2022-02-28 18:07:11,628 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:07:11,628 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:07:16,183 DEBUG   SenderThread:67052 [sender.py:send():235] send: stats
+2022-02-28 18:07:26,744 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:07:26,744 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:07:41,840 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:07:41,840 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:07:41,978 DEBUG   SenderThread:67052 [sender.py:send():235] send: history
+2022-02-28 18:07:41,978 DEBUG   SenderThread:67052 [sender.py:send():235] send: summary
+2022-02-28 18:07:41,979 INFO    SenderThread:67052 [sender.py:_save_file():944] saving file wandb-summary.json with policy end
+2022-02-28 18:07:42,333 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/wandb-summary.json
+2022-02-28 18:07:43,337 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/output.log
+2022-02-28 18:07:47,088 DEBUG   SenderThread:67052 [sender.py:send():235] send: stats
+2022-02-28 18:07:56,949 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:07:56,949 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:08:12,056 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:08:12,057 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:08:12,281 DEBUG   SenderThread:67052 [sender.py:send():235] send: history
+2022-02-28 18:08:12,282 DEBUG   SenderThread:67052 [sender.py:send():235] send: summary
+2022-02-28 18:08:12,282 INFO    SenderThread:67052 [sender.py:_save_file():944] saving file wandb-summary.json with policy end
+2022-02-28 18:08:12,441 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/wandb-summary.json
+2022-02-28 18:08:13,444 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/output.log
+2022-02-28 18:08:17,983 DEBUG   SenderThread:67052 [sender.py:send():235] send: stats
+2022-02-28 18:08:27,164 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:08:27,165 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:08:40,968 DEBUG   SenderThread:67052 [sender.py:send():235] send: history
+2022-02-28 18:08:40,968 DEBUG   SenderThread:67052 [sender.py:send():235] send: summary
+2022-02-28 18:08:40,968 INFO    SenderThread:67052 [sender.py:_save_file():944] saving file wandb-summary.json with policy end
+2022-02-28 18:08:41,548 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/wandb-summary.json
+2022-02-28 18:08:42,262 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:08:42,262 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:08:43,558 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/output.log
+2022-02-28 18:08:48,994 DEBUG   SenderThread:67052 [sender.py:send():235] send: stats
+2022-02-28 18:08:57,364 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:08:57,364 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:09:11,376 DEBUG   SenderThread:67052 [sender.py:send():235] send: history
+2022-02-28 18:09:11,376 DEBUG   SenderThread:67052 [sender.py:send():235] send: summary
+2022-02-28 18:09:11,376 INFO    SenderThread:67052 [sender.py:_save_file():944] saving file wandb-summary.json with policy end
+2022-02-28 18:09:11,664 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/wandb-summary.json
+2022-02-28 18:09:12,461 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:09:12,461 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:09:13,673 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/output.log
+2022-02-28 18:09:19,997 DEBUG   SenderThread:67052 [sender.py:send():235] send: stats
+2022-02-28 18:09:27,564 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:09:27,564 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:09:40,885 DEBUG   SenderThread:67052 [sender.py:send():235] send: history
+2022-02-28 18:09:40,885 DEBUG   SenderThread:67052 [sender.py:send():235] send: summary
+2022-02-28 18:09:40,886 INFO    SenderThread:67052 [sender.py:_save_file():944] saving file wandb-summary.json with policy end
+2022-02-28 18:09:41,768 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/wandb-summary.json
+2022-02-28 18:09:42,674 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:09:42,675 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:09:43,774 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/output.log
+2022-02-28 18:09:50,974 DEBUG   SenderThread:67052 [sender.py:send():235] send: stats
+2022-02-28 18:09:57,768 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:09:57,769 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:10:07,764 DEBUG   SenderThread:67052 [sender.py:send():235] send: history
+2022-02-28 18:10:07,765 DEBUG   SenderThread:67052 [sender.py:send():235] send: summary
+2022-02-28 18:10:07,765 INFO    SenderThread:67052 [sender.py:_save_file():944] saving file wandb-summary.json with policy end
+2022-02-28 18:10:07,858 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/wandb-summary.json
+2022-02-28 18:10:09,864 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/output.log
+2022-02-28 18:10:12,862 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:10:12,862 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:10:21,915 DEBUG   SenderThread:67052 [sender.py:send():235] send: stats
+2022-02-28 18:10:27,964 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:10:27,964 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:10:35,603 DEBUG   SenderThread:67052 [sender.py:send():235] send: history
+2022-02-28 18:10:35,603 DEBUG   SenderThread:67052 [sender.py:send():235] send: summary
+2022-02-28 18:10:35,604 INFO    SenderThread:67052 [sender.py:_save_file():944] saving file wandb-summary.json with policy end
+2022-02-28 18:10:35,945 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/wandb-summary.json
+2022-02-28 18:10:37,950 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/output.log
+2022-02-28 18:10:43,061 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:10:43,061 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:10:52,955 DEBUG   SenderThread:67052 [sender.py:send():235] send: stats
+2022-02-28 18:10:58,184 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:10:58,184 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:11:02,379 DEBUG   SenderThread:67052 [sender.py:send():235] send: history
+2022-02-28 18:11:02,379 DEBUG   SenderThread:67052 [sender.py:send():235] send: summary
+2022-02-28 18:11:02,380 INFO    SenderThread:67052 [sender.py:_save_file():944] saving file wandb-summary.json with policy end
+2022-02-28 18:11:03,031 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/wandb-summary.json
+2022-02-28 18:11:04,033 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/output.log
+2022-02-28 18:11:13,278 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:11:13,278 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:11:23,959 DEBUG   SenderThread:67052 [sender.py:send():235] send: stats
+2022-02-28 18:11:28,384 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:11:28,384 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:11:30,449 DEBUG   SenderThread:67052 [sender.py:send():235] send: history
+2022-02-28 18:11:30,449 DEBUG   SenderThread:67052 [sender.py:send():235] send: summary
+2022-02-28 18:11:30,450 INFO    SenderThread:67052 [sender.py:_save_file():944] saving file wandb-summary.json with policy end
+2022-02-28 18:11:31,126 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/wandb-summary.json
+2022-02-28 18:11:32,131 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/output.log
+2022-02-28 18:11:43,484 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:11:43,484 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:11:54,824 DEBUG   SenderThread:67052 [sender.py:send():235] send: stats
+2022-02-28 18:11:57,746 DEBUG   SenderThread:67052 [sender.py:send():235] send: history
+2022-02-28 18:11:57,746 DEBUG   SenderThread:67052 [sender.py:send():235] send: summary
+2022-02-28 18:11:57,747 INFO    SenderThread:67052 [sender.py:_save_file():944] saving file wandb-summary.json with policy end
+2022-02-28 18:11:58,220 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/wandb-summary.json
+2022-02-28 18:11:58,582 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:11:58,582 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:12:00,227 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/output.log
+2022-02-28 18:12:13,684 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:12:13,684 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:12:25,790 DEBUG   SenderThread:67052 [sender.py:send():235] send: stats
+2022-02-28 18:12:28,162 DEBUG   SenderThread:67052 [sender.py:send():235] send: history
+2022-02-28 18:12:28,162 DEBUG   SenderThread:67052 [sender.py:send():235] send: summary
+2022-02-28 18:12:28,163 INFO    SenderThread:67052 [sender.py:_save_file():944] saving file wandb-summary.json with policy end
+2022-02-28 18:12:28,338 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/wandb-summary.json
+2022-02-28 18:12:28,781 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:12:28,782 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:12:30,344 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/output.log
+2022-02-28 18:12:43,878 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:12:43,878 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:12:56,755 DEBUG   SenderThread:67052 [sender.py:send():235] send: stats
+2022-02-28 18:12:58,971 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:12:58,971 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:13:02,108 DEBUG   SenderThread:67052 [sender.py:send():235] send: history
+2022-02-28 18:13:02,108 DEBUG   SenderThread:67052 [sender.py:send():235] send: summary
+2022-02-28 18:13:02,109 INFO    SenderThread:67052 [sender.py:_save_file():944] saving file wandb-summary.json with policy end
+2022-02-28 18:13:02,460 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/wandb-summary.json
+2022-02-28 18:13:04,469 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/output.log
+2022-02-28 18:13:14,099 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:13:14,100 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:13:27,768 DEBUG   SenderThread:67052 [sender.py:send():235] send: stats
+2022-02-28 18:13:29,221 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:13:29,222 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:13:34,965 DEBUG   SenderThread:67052 [sender.py:send():235] send: history
+2022-02-28 18:13:34,965 DEBUG   SenderThread:67052 [sender.py:send():235] send: summary
+2022-02-28 18:13:34,966 INFO    SenderThread:67052 [sender.py:_save_file():944] saving file wandb-summary.json with policy end
+2022-02-28 18:13:35,590 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/wandb-summary.json
+2022-02-28 18:13:36,591 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/output.log
+2022-02-28 18:13:44,319 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:13:44,319 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:13:58,826 DEBUG   SenderThread:67052 [sender.py:send():235] send: stats
+2022-02-28 18:13:59,474 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:13:59,474 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:14:04,899 DEBUG   SenderThread:67052 [sender.py:send():235] send: history
+2022-02-28 18:14:04,899 DEBUG   SenderThread:67052 [sender.py:send():235] send: summary
+2022-02-28 18:14:04,900 INFO    SenderThread:67052 [sender.py:_save_file():944] saving file wandb-summary.json with policy end
+2022-02-28 18:14:05,674 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/wandb-summary.json
+2022-02-28 18:14:06,676 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/output.log
+2022-02-28 18:14:14,573 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:14:14,574 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:14:29,717 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:14:29,718 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:14:29,898 DEBUG   SenderThread:67052 [sender.py:send():235] send: stats
+2022-02-28 18:14:33,955 DEBUG   SenderThread:67052 [sender.py:send():235] send: history
+2022-02-28 18:14:33,955 DEBUG   SenderThread:67052 [sender.py:send():235] send: summary
+2022-02-28 18:14:33,956 INFO    SenderThread:67052 [sender.py:_save_file():944] saving file wandb-summary.json with policy end
+2022-02-28 18:14:34,773 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/wandb-summary.json
+2022-02-28 18:14:35,776 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/output.log
+2022-02-28 18:14:44,817 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:14:44,817 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:14:59,926 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:14:59,926 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:15:00,911 DEBUG   SenderThread:67052 [sender.py:send():235] send: stats
+2022-02-28 18:15:01,401 DEBUG   SenderThread:67052 [sender.py:send():235] send: history
+2022-02-28 18:15:01,401 DEBUG   SenderThread:67052 [sender.py:send():235] send: summary
+2022-02-28 18:15:01,402 INFO    SenderThread:67052 [sender.py:_save_file():944] saving file wandb-summary.json with policy end
+2022-02-28 18:15:01,874 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/wandb-summary.json
+2022-02-28 18:15:03,883 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/output.log
+2022-02-28 18:15:15,027 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:15:15,028 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:15:30,140 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:15:30,141 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:15:31,274 DEBUG   SenderThread:67052 [sender.py:send():235] send: history
+2022-02-28 18:15:31,274 DEBUG   SenderThread:67052 [sender.py:send():235] send: summary
+2022-02-28 18:15:31,276 INFO    SenderThread:67052 [sender.py:_save_file():944] saving file wandb-summary.json with policy end
+2022-02-28 18:15:31,855 DEBUG   SenderThread:67052 [sender.py:send():235] send: stats
+2022-02-28 18:15:31,991 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/wandb-summary.json
+2022-02-28 18:15:31,992 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/output.log
+2022-02-28 18:15:45,250 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:15:45,251 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:16:00,355 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:16:00,356 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:16:01,209 DEBUG   SenderThread:67052 [sender.py:send():235] send: history
+2022-02-28 18:16:01,210 DEBUG   SenderThread:67052 [sender.py:send():235] send: summary
+2022-02-28 18:16:01,211 INFO    SenderThread:67052 [sender.py:_save_file():944] saving file wandb-summary.json with policy end
+2022-02-28 18:16:02,100 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/wandb-summary.json
+2022-02-28 18:16:02,101 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/output.log
+2022-02-28 18:16:02,831 DEBUG   SenderThread:67052 [sender.py:send():235] send: stats
+2022-02-28 18:16:15,475 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:16:15,476 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:16:30,569 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:16:30,569 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:16:33,199 DEBUG   SenderThread:67052 [sender.py:send():235] send: history
+2022-02-28 18:16:33,199 DEBUG   SenderThread:67052 [sender.py:send():235] send: summary
+2022-02-28 18:16:33,200 INFO    SenderThread:67052 [sender.py:_save_file():944] saving file wandb-summary.json with policy end
+2022-02-28 18:16:33,215 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/wandb-summary.json
+2022-02-28 18:16:33,819 DEBUG   SenderThread:67052 [sender.py:send():235] send: stats
+2022-02-28 18:16:34,217 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/output.log
+2022-02-28 18:16:45,663 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:16:45,663 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:17:00,768 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:17:00,769 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:17:03,118 DEBUG   SenderThread:67052 [sender.py:send():235] send: history
+2022-02-28 18:17:03,118 DEBUG   SenderThread:67052 [sender.py:send():235] send: summary
+2022-02-28 18:17:03,119 INFO    SenderThread:67052 [sender.py:_save_file():944] saving file wandb-summary.json with policy end
+2022-02-28 18:17:03,326 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/wandb-summary.json
+2022-02-28 18:17:04,329 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/output.log
+2022-02-28 18:17:04,887 DEBUG   SenderThread:67052 [sender.py:send():235] send: stats
+2022-02-28 18:17:15,869 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:17:15,869 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:17:30,971 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:17:30,971 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:17:35,881 DEBUG   SenderThread:67052 [sender.py:send():235] send: history
+2022-02-28 18:17:35,882 DEBUG   SenderThread:67052 [sender.py:send():235] send: summary
+2022-02-28 18:17:35,882 INFO    SenderThread:67052 [sender.py:_save_file():944] saving file wandb-summary.json with policy end
+2022-02-28 18:17:35,975 DEBUG   SenderThread:67052 [sender.py:send():235] send: stats
+2022-02-28 18:17:36,458 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/wandb-summary.json
+2022-02-28 18:17:38,464 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/output.log
+2022-02-28 18:17:46,068 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:17:46,068 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:18:01,163 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:18:01,163 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:18:07,099 DEBUG   SenderThread:67052 [sender.py:send():235] send: stats
+2022-02-28 18:18:08,036 DEBUG   SenderThread:67052 [sender.py:send():235] send: history
+2022-02-28 18:18:08,037 DEBUG   SenderThread:67052 [sender.py:send():235] send: summary
+2022-02-28 18:18:08,037 INFO    SenderThread:67052 [sender.py:_save_file():944] saving file wandb-summary.json with policy end
+2022-02-28 18:18:08,588 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/wandb-summary.json
+2022-02-28 18:18:08,588 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/output.log
+2022-02-28 18:18:16,268 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:18:16,268 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:18:31,363 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:18:31,363 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:18:36,809 DEBUG   SenderThread:67052 [sender.py:send():235] send: history
+2022-02-28 18:18:36,809 DEBUG   SenderThread:67052 [sender.py:send():235] send: summary
+2022-02-28 18:18:36,810 INFO    SenderThread:67052 [sender.py:_save_file():944] saving file wandb-summary.json with policy end
+2022-02-28 18:18:37,689 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/wandb-summary.json
+2022-02-28 18:18:38,140 DEBUG   SenderThread:67052 [sender.py:send():235] send: stats
+2022-02-28 18:18:38,694 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/output.log
+2022-02-28 18:18:46,456 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:18:46,457 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:19:01,557 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:19:01,557 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:19:09,178 DEBUG   SenderThread:67052 [sender.py:send():235] send: stats
+2022-02-28 18:19:11,976 DEBUG   SenderThread:67052 [sender.py:send():235] send: history
+2022-02-28 18:19:11,976 DEBUG   SenderThread:67052 [sender.py:send():235] send: summary
+2022-02-28 18:19:11,978 INFO    SenderThread:67052 [sender.py:_save_file():944] saving file wandb-summary.json with policy end
+2022-02-28 18:19:12,679 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/wandb-summary.json
+2022-02-28 18:19:14,686 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/output.log
+2022-02-28 18:19:16,521 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:19:16,521 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:19:31,621 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:19:31,622 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:19:40,032 DEBUG   SenderThread:67052 [sender.py:send():235] send: stats
+2022-02-28 18:19:42,385 DEBUG   SenderThread:67052 [sender.py:send():235] send: history
+2022-02-28 18:19:42,385 DEBUG   SenderThread:67052 [sender.py:send():235] send: summary
+2022-02-28 18:19:42,386 INFO    SenderThread:67052 [sender.py:_save_file():944] saving file wandb-summary.json with policy end
+2022-02-28 18:19:42,789 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/wandb-summary.json
+2022-02-28 18:19:44,795 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/output.log
+2022-02-28 18:19:46,716 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:19:46,717 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:20:01,820 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:20:01,820 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:20:11,080 DEBUG   SenderThread:67052 [sender.py:send():235] send: stats
+2022-02-28 18:20:12,711 DEBUG   SenderThread:67052 [sender.py:send():235] send: history
+2022-02-28 18:20:12,711 DEBUG   SenderThread:67052 [sender.py:send():235] send: summary
+2022-02-28 18:20:12,712 INFO    SenderThread:67052 [sender.py:_save_file():944] saving file wandb-summary.json with policy end
+2022-02-28 18:20:12,908 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/wandb-summary.json
+2022-02-28 18:20:14,915 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/output.log
+2022-02-28 18:20:16,928 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:20:16,928 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:20:32,042 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:20:32,043 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:20:45,032 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/output.log
+2022-02-28 18:20:52,051 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:20:55,609 DEBUG   SenderThread:67052 [sender.py:send():235] send: stats
+2022-02-28 18:20:55,609 DEBUG   SenderThread:67052 [sender.py:send():235] send: history
+2022-02-28 18:20:55,610 DEBUG   SenderThread:67052 [sender.py:send():235] send: summary
+2022-02-28 18:20:55,610 INFO    SenderThread:67052 [sender.py:_save_file():944] saving file wandb-summary.json with policy end
+2022-02-28 18:20:55,611 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:20:56,075 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/wandb-summary.json
+2022-02-28 18:21:10,717 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:21:10,719 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:21:13,245 DEBUG   SenderThread:67052 [sender.py:send():235] send: stats
+2022-02-28 18:21:15,220 DEBUG   SenderThread:67052 [sender.py:send():235] send: history
+2022-02-28 18:21:15,221 DEBUG   SenderThread:67052 [sender.py:send():235] send: summary
+2022-02-28 18:21:15,222 INFO    SenderThread:67052 [sender.py:_save_file():944] saving file wandb-summary.json with policy end
+2022-02-28 18:21:16,145 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/wandb-summary.json
+2022-02-28 18:21:17,151 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/output.log
+2022-02-28 18:21:25,824 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:21:25,825 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:21:40,928 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:21:40,929 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:21:44,239 DEBUG   SenderThread:67052 [sender.py:send():235] send: stats
+2022-02-28 18:21:46,634 DEBUG   SenderThread:67052 [sender.py:send():235] send: history
+2022-02-28 18:21:46,635 DEBUG   SenderThread:67052 [sender.py:send():235] send: summary
+2022-02-28 18:21:46,636 INFO    SenderThread:67052 [sender.py:_save_file():944] saving file wandb-summary.json with policy end
+2022-02-28 18:21:47,255 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/wandb-summary.json
+2022-02-28 18:21:49,265 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/output.log
+2022-02-28 18:21:56,225 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:21:56,225 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:22:11,332 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:22:11,332 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:22:15,187 DEBUG   SenderThread:67052 [sender.py:send():235] send: stats
+2022-02-28 18:22:15,847 DEBUG   SenderThread:67052 [sender.py:send():235] send: history
+2022-02-28 18:22:15,847 DEBUG   SenderThread:67052 [sender.py:send():235] send: summary
+2022-02-28 18:22:15,848 INFO    SenderThread:67052 [sender.py:_save_file():944] saving file wandb-summary.json with policy end
+2022-02-28 18:22:16,357 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/wandb-summary.json
+2022-02-28 18:22:17,362 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/output.log
+2022-02-28 18:22:26,445 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:22:26,446 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:22:41,544 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:22:41,544 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:22:45,603 DEBUG   SenderThread:67052 [sender.py:send():235] send: history
+2022-02-28 18:22:45,603 DEBUG   SenderThread:67052 [sender.py:send():235] send: summary
+2022-02-28 18:22:45,604 INFO    SenderThread:67052 [sender.py:_save_file():944] saving file wandb-summary.json with policy end
+2022-02-28 18:22:46,145 DEBUG   SenderThread:67052 [sender.py:send():235] send: stats
+2022-02-28 18:22:46,467 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/wandb-summary.json
+2022-02-28 18:22:47,472 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/output.log
+2022-02-28 18:22:56,660 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:22:56,661 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:23:11,816 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:23:11,816 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:23:17,182 DEBUG   SenderThread:67052 [sender.py:send():235] send: stats
+2022-02-28 18:23:17,409 DEBUG   SenderThread:67052 [sender.py:send():235] send: history
+2022-02-28 18:23:17,409 DEBUG   SenderThread:67052 [sender.py:send():235] send: summary
+2022-02-28 18:23:17,410 INFO    SenderThread:67052 [sender.py:_save_file():944] saving file wandb-summary.json with policy end
+2022-02-28 18:23:17,589 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/wandb-summary.json
+2022-02-28 18:23:19,600 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/output.log
+2022-02-28 18:23:26,910 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:23:26,910 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:23:42,006 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:23:42,006 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:23:48,348 DEBUG   SenderThread:67052 [sender.py:send():235] send: stats
+2022-02-28 18:23:51,162 DEBUG   SenderThread:67052 [sender.py:send():235] send: history
+2022-02-28 18:23:51,162 DEBUG   SenderThread:67052 [sender.py:send():235] send: summary
+2022-02-28 18:23:51,163 INFO    SenderThread:67052 [sender.py:_save_file():944] saving file wandb-summary.json with policy end
+2022-02-28 18:23:51,743 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/wandb-summary.json
+2022-02-28 18:23:53,751 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/output.log
+2022-02-28 18:23:57,372 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:23:57,372 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:24:12,468 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:24:12,469 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:24:19,486 DEBUG   SenderThread:67052 [sender.py:send():235] send: stats
+2022-02-28 18:24:25,833 DEBUG   SenderThread:67052 [sender.py:send():235] send: history
+2022-02-28 18:24:25,833 DEBUG   SenderThread:67052 [sender.py:send():235] send: summary
+2022-02-28 18:24:25,834 INFO    SenderThread:67052 [sender.py:_save_file():944] saving file wandb-summary.json with policy end
+2022-02-28 18:24:25,886 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/wandb-summary.json
+2022-02-28 18:24:27,561 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:24:27,561 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:24:27,892 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/output.log
+2022-02-28 18:24:42,654 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:24:42,654 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:24:50,638 DEBUG   SenderThread:67052 [sender.py:send():235] send: stats
+2022-02-28 18:24:56,895 DEBUG   SenderThread:67052 [sender.py:send():235] send: history
+2022-02-28 18:24:56,896 DEBUG   SenderThread:67052 [sender.py:send():235] send: summary
+2022-02-28 18:24:56,896 INFO    SenderThread:67052 [sender.py:_save_file():944] saving file wandb-summary.json with policy end
+2022-02-28 18:24:57,002 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/wandb-summary.json
+2022-02-28 18:24:57,765 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:24:57,765 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:25:00,010 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/output.log
+2022-02-28 18:25:12,874 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:25:12,875 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:25:21,624 DEBUG   SenderThread:67052 [sender.py:send():235] send: stats
+2022-02-28 18:25:24,747 DEBUG   SenderThread:67052 [sender.py:send():235] send: history
+2022-02-28 18:25:24,748 DEBUG   SenderThread:67052 [sender.py:send():235] send: summary
+2022-02-28 18:25:24,748 INFO    SenderThread:67052 [sender.py:_save_file():944] saving file wandb-summary.json with policy end
+2022-02-28 18:25:25,131 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/wandb-summary.json
+2022-02-28 18:25:25,131 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/output.log
+2022-02-28 18:25:27,999 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:25:27,999 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:25:43,100 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:25:43,101 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:25:52,610 DEBUG   SenderThread:67052 [sender.py:send():235] send: stats
+2022-02-28 18:25:54,691 DEBUG   SenderThread:67052 [sender.py:send():235] send: history
+2022-02-28 18:25:54,691 DEBUG   SenderThread:67052 [sender.py:send():235] send: summary
+2022-02-28 18:25:54,692 INFO    SenderThread:67052 [sender.py:_save_file():944] saving file wandb-summary.json with policy end
+2022-02-28 18:25:55,227 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/wandb-summary.json
+2022-02-28 18:25:55,227 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/output.log
+2022-02-28 18:25:58,199 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:25:58,199 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:26:13,297 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:26:13,297 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:26:23,583 DEBUG   SenderThread:67052 [sender.py:send():235] send: stats
+2022-02-28 18:26:24,094 DEBUG   SenderThread:67052 [sender.py:send():235] send: history
+2022-02-28 18:26:24,094 DEBUG   SenderThread:67052 [sender.py:send():235] send: summary
+2022-02-28 18:26:24,095 INFO    SenderThread:67052 [sender.py:_save_file():944] saving file wandb-summary.json with policy end
+2022-02-28 18:26:24,337 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/wandb-summary.json
+2022-02-28 18:26:25,340 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/output.log
+2022-02-28 18:26:28,394 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:26:28,395 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:26:43,495 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:26:43,495 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:26:54,685 DEBUG   SenderThread:67052 [sender.py:send():235] send: stats
+2022-02-28 18:26:56,684 DEBUG   SenderThread:67052 [sender.py:send():235] send: history
+2022-02-28 18:26:56,684 DEBUG   SenderThread:67052 [sender.py:send():235] send: summary
+2022-02-28 18:26:56,685 INFO    SenderThread:67052 [sender.py:_save_file():944] saving file wandb-summary.json with policy end
+2022-02-28 18:26:57,460 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/wandb-summary.json
+2022-02-28 18:26:57,460 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/output.log
+2022-02-28 18:26:58,695 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:26:58,695 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:27:13,789 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:27:13,789 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:27:25,779 DEBUG   SenderThread:67052 [sender.py:send():235] send: stats
+2022-02-28 18:27:28,119 DEBUG   SenderThread:67052 [sender.py:send():235] send: history
+2022-02-28 18:27:28,119 DEBUG   SenderThread:67052 [sender.py:send():235] send: summary
+2022-02-28 18:27:28,120 INFO    SenderThread:67052 [sender.py:_save_file():944] saving file wandb-summary.json with policy end
+2022-02-28 18:27:28,585 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/wandb-summary.json
+2022-02-28 18:27:28,885 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:27:28,885 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:27:29,586 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/output.log
+2022-02-28 18:27:43,991 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:27:43,992 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:27:56,916 DEBUG   SenderThread:67052 [sender.py:send():235] send: stats
+2022-02-28 18:27:59,090 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:27:59,090 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:28:00,427 DEBUG   SenderThread:67052 [sender.py:send():235] send: history
+2022-02-28 18:28:00,427 DEBUG   SenderThread:67052 [sender.py:send():235] send: summary
+2022-02-28 18:28:00,428 INFO    SenderThread:67052 [sender.py:_save_file():944] saving file wandb-summary.json with policy end
+2022-02-28 18:28:00,712 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/wandb-summary.json
+2022-02-28 18:28:01,715 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/output.log
+2022-02-28 18:28:14,240 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:28:14,240 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:28:27,770 DEBUG   SenderThread:67052 [sender.py:send():235] send: stats
+2022-02-28 18:28:28,825 DEBUG   SenderThread:67052 [sender.py:send():235] send: history
+2022-02-28 18:28:28,825 DEBUG   SenderThread:67052 [sender.py:send():235] send: summary
+2022-02-28 18:28:28,826 INFO    SenderThread:67052 [sender.py:_save_file():944] saving file wandb-summary.json with policy end
+2022-02-28 18:28:29,337 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:28:29,337 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:28:29,817 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/wandb-summary.json
+2022-02-28 18:28:29,817 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/output.log
+2022-02-28 18:28:44,436 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:28:44,436 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:28:55,743 DEBUG   SenderThread:67052 [sender.py:send():235] send: history
+2022-02-28 18:28:55,744 DEBUG   SenderThread:67052 [sender.py:send():235] send: summary
+2022-02-28 18:28:55,744 INFO    SenderThread:67052 [sender.py:_save_file():944] saving file wandb-summary.json with policy end
+2022-02-28 18:28:55,909 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/wandb-summary.json
+2022-02-28 18:28:57,920 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/output.log
+2022-02-28 18:28:58,607 DEBUG   SenderThread:67052 [sender.py:send():235] send: stats
+2022-02-28 18:28:59,541 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:28:59,541 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:29:14,639 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:29:14,639 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:29:22,498 DEBUG   SenderThread:67052 [sender.py:send():235] send: history
+2022-02-28 18:29:22,498 DEBUG   SenderThread:67052 [sender.py:send():235] send: summary
+2022-02-28 18:29:22,499 INFO    SenderThread:67052 [sender.py:_save_file():944] saving file wandb-summary.json with policy end
+2022-02-28 18:29:22,991 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/wandb-summary.json
+2022-02-28 18:29:23,994 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/output.log
+2022-02-28 18:29:29,437 DEBUG   SenderThread:67052 [sender.py:send():235] send: stats
+2022-02-28 18:29:29,888 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:29:29,888 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:29:44,986 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:29:44,987 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:29:51,429 DEBUG   SenderThread:67052 [sender.py:send():235] send: history
+2022-02-28 18:29:51,429 DEBUG   SenderThread:67052 [sender.py:send():235] send: summary
+2022-02-28 18:29:51,430 INFO    SenderThread:67052 [sender.py:_save_file():944] saving file wandb-summary.json with policy end
+2022-02-28 18:29:52,090 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/wandb-summary.json
+2022-02-28 18:29:52,091 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/output.log
+2022-02-28 18:30:00,085 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:30:00,086 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:30:00,441 DEBUG   SenderThread:67052 [sender.py:send():235] send: stats
+2022-02-28 18:30:15,181 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:30:15,182 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:30:19,516 DEBUG   SenderThread:67052 [sender.py:send():235] send: history
+2022-02-28 18:30:19,517 DEBUG   SenderThread:67052 [sender.py:send():235] send: summary
+2022-02-28 18:30:19,517 INFO    SenderThread:67052 [sender.py:_save_file():944] saving file wandb-summary.json with policy end
+2022-02-28 18:30:20,187 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/wandb-summary.json
+2022-02-28 18:30:22,194 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/output.log
+2022-02-28 18:30:30,286 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:30:30,286 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:30:31,484 DEBUG   SenderThread:67052 [sender.py:send():235] send: stats
+2022-02-28 18:30:45,391 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:30:45,391 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:30:47,919 DEBUG   SenderThread:67052 [sender.py:send():235] send: history
+2022-02-28 18:30:47,920 DEBUG   SenderThread:67052 [sender.py:send():235] send: summary
+2022-02-28 18:30:47,921 INFO    SenderThread:67052 [sender.py:_save_file():944] saving file wandb-summary.json with policy end
+2022-02-28 18:30:48,281 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/wandb-summary.json
+2022-02-28 18:30:50,289 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/output.log
+2022-02-28 18:31:00,524 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:31:00,524 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:31:02,531 DEBUG   SenderThread:67052 [sender.py:send():235] send: stats
+2022-02-28 18:31:15,048 DEBUG   SenderThread:67052 [sender.py:send():235] send: history
+2022-02-28 18:31:15,049 DEBUG   SenderThread:67052 [sender.py:send():235] send: summary
+2022-02-28 18:31:15,049 INFO    SenderThread:67052 [sender.py:_save_file():944] saving file wandb-summary.json with policy end
+2022-02-28 18:31:15,366 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/wandb-summary.json
+2022-02-28 18:31:15,628 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:31:15,628 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:31:16,369 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/output.log
+2022-02-28 18:31:30,727 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:31:30,727 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:31:33,480 DEBUG   SenderThread:67052 [sender.py:send():235] send: stats
+2022-02-28 18:31:43,245 DEBUG   SenderThread:67052 [sender.py:send():235] send: history
+2022-02-28 18:31:43,245 DEBUG   SenderThread:67052 [sender.py:send():235] send: summary
+2022-02-28 18:31:43,246 INFO    SenderThread:67052 [sender.py:_save_file():944] saving file wandb-summary.json with policy end
+2022-02-28 18:31:43,463 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/wandb-summary.json
+2022-02-28 18:31:44,466 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/output.log
+2022-02-28 18:31:45,820 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:31:45,821 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:32:00,921 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:32:00,921 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:32:04,270 DEBUG   SenderThread:67052 [sender.py:send():235] send: stats
+2022-02-28 18:32:10,571 DEBUG   SenderThread:67052 [sender.py:send():235] send: history
+2022-02-28 18:32:10,571 DEBUG   SenderThread:67052 [sender.py:send():235] send: summary
+2022-02-28 18:32:10,572 INFO    SenderThread:67052 [sender.py:_save_file():944] saving file wandb-summary.json with policy end
+2022-02-28 18:32:11,554 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/wandb-summary.json
+2022-02-28 18:32:12,557 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/output.log
+2022-02-28 18:32:16,017 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:32:16,017 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:32:31,117 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:32:31,124 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:32:35,160 DEBUG   SenderThread:67052 [sender.py:send():235] send: stats
+2022-02-28 18:32:42,657 DEBUG   SenderThread:67052 [sender.py:send():235] send: history
+2022-02-28 18:32:42,658 DEBUG   SenderThread:67052 [sender.py:send():235] send: summary
+2022-02-28 18:32:42,659 INFO    SenderThread:67052 [sender.py:_save_file():944] saving file wandb-summary.json with policy end
+2022-02-28 18:32:42,673 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/wandb-summary.json
+2022-02-28 18:32:44,684 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/output.log
+2022-02-28 18:32:46,243 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:32:46,243 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:33:01,342 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:33:01,342 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:33:06,139 DEBUG   SenderThread:67052 [sender.py:send():235] send: stats
+2022-02-28 18:33:12,562 DEBUG   SenderThread:67052 [sender.py:send():235] send: history
+2022-02-28 18:33:12,563 DEBUG   SenderThread:67052 [sender.py:send():235] send: summary
+2022-02-28 18:33:12,563 INFO    SenderThread:67052 [sender.py:_save_file():944] saving file wandb-summary.json with policy end
+2022-02-28 18:33:12,793 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/wandb-summary.json
+2022-02-28 18:33:14,800 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/output.log
+2022-02-28 18:33:16,452 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:33:16,452 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:33:31,556 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:33:31,556 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:33:37,208 DEBUG   SenderThread:67052 [sender.py:send():235] send: stats
+2022-02-28 18:33:44,544 DEBUG   SenderThread:67052 [sender.py:send():235] send: history
+2022-02-28 18:33:44,545 DEBUG   SenderThread:67052 [sender.py:send():235] send: summary
+2022-02-28 18:33:44,546 INFO    SenderThread:67052 [sender.py:_save_file():944] saving file wandb-summary.json with policy end
+2022-02-28 18:33:44,910 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/wandb-summary.json
+2022-02-28 18:33:46,692 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:33:46,693 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:33:46,918 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/output.log
+2022-02-28 18:34:01,790 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:34:01,790 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:34:08,258 DEBUG   SenderThread:67052 [sender.py:send():235] send: stats
+2022-02-28 18:34:16,896 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:34:16,897 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:34:18,465 DEBUG   SenderThread:67052 [sender.py:send():235] send: history
+2022-02-28 18:34:18,465 DEBUG   SenderThread:67052 [sender.py:send():235] send: summary
+2022-02-28 18:34:18,466 INFO    SenderThread:67052 [sender.py:_save_file():944] saving file wandb-summary.json with policy end
+2022-02-28 18:34:19,025 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/wandb-summary.json
+2022-02-28 18:34:21,029 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/output.log
+2022-02-28 18:34:32,058 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:34:32,059 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:34:39,180 DEBUG   SenderThread:67052 [sender.py:send():235] send: stats
+2022-02-28 18:34:47,152 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:34:47,152 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:34:52,832 DEBUG   SenderThread:67052 [sender.py:send():235] send: history
+2022-02-28 18:34:52,832 DEBUG   SenderThread:67052 [sender.py:send():235] send: summary
+2022-02-28 18:34:52,833 INFO    SenderThread:67052 [sender.py:_save_file():944] saving file wandb-summary.json with policy end
+2022-02-28 18:34:53,139 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/wandb-summary.json
+2022-02-28 18:34:55,148 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/output.log
+2022-02-28 18:35:02,262 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:35:02,262 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:35:10,114 DEBUG   SenderThread:67052 [sender.py:send():235] send: stats
+2022-02-28 18:35:17,376 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:35:17,376 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:35:23,910 DEBUG   SenderThread:67052 [sender.py:send():235] send: history
+2022-02-28 18:35:23,911 DEBUG   SenderThread:67052 [sender.py:send():235] send: summary
+2022-02-28 18:35:23,912 INFO    SenderThread:67052 [sender.py:_save_file():944] saving file wandb-summary.json with policy end
+2022-02-28 18:35:24,245 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/wandb-summary.json
+2022-02-28 18:35:25,249 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/output.log
+2022-02-28 18:35:32,478 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:35:32,478 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:35:40,994 DEBUG   SenderThread:67052 [sender.py:send():235] send: stats
+2022-02-28 18:35:47,736 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:35:47,739 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:35:58,115 DEBUG   SenderThread:67052 [sender.py:send():235] send: history
+2022-02-28 18:35:58,115 DEBUG   SenderThread:67052 [sender.py:send():235] send: summary
+2022-02-28 18:35:58,116 INFO    SenderThread:67052 [sender.py:_save_file():944] saving file wandb-summary.json with policy end
+2022-02-28 18:35:58,352 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/wandb-summary.json
+2022-02-28 18:35:59,357 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/output.log
+2022-02-28 18:36:02,848 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:36:02,848 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:36:11,933 DEBUG   SenderThread:67052 [sender.py:send():235] send: stats
+2022-02-28 18:36:17,943 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:36:17,944 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:36:31,079 DEBUG   SenderThread:67052 [sender.py:send():235] send: history
+2022-02-28 18:36:31,080 DEBUG   SenderThread:67052 [sender.py:send():235] send: summary
+2022-02-28 18:36:31,081 INFO    SenderThread:67052 [sender.py:_save_file():944] saving file wandb-summary.json with policy end
+2022-02-28 18:36:31,471 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/wandb-summary.json
+2022-02-28 18:36:32,475 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/output.log
+2022-02-28 18:36:33,047 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:36:33,047 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:36:42,958 DEBUG   SenderThread:67052 [sender.py:send():235] send: stats
+2022-02-28 18:36:48,139 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:36:48,139 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:37:00,878 DEBUG   SenderThread:67052 [sender.py:send():235] send: history
+2022-02-28 18:37:00,878 DEBUG   SenderThread:67052 [sender.py:send():235] send: summary
+2022-02-28 18:37:00,879 INFO    SenderThread:67052 [sender.py:_save_file():944] saving file wandb-summary.json with policy end
+2022-02-28 18:37:01,583 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/wandb-summary.json
+2022-02-28 18:37:02,588 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/output.log
+2022-02-28 18:37:03,235 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:37:03,236 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:37:13,979 DEBUG   SenderThread:67052 [sender.py:send():235] send: stats
+2022-02-28 18:37:18,335 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:37:18,335 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:37:31,551 DEBUG   SenderThread:67052 [sender.py:send():235] send: history
+2022-02-28 18:37:31,551 DEBUG   SenderThread:67052 [sender.py:send():235] send: summary
+2022-02-28 18:37:31,551 INFO    SenderThread:67052 [sender.py:_save_file():944] saving file wandb-summary.json with policy end
+2022-02-28 18:37:31,704 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/wandb-summary.json
+2022-02-28 18:37:32,707 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/output.log
+2022-02-28 18:37:33,439 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:37:33,439 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:37:45,002 DEBUG   SenderThread:67052 [sender.py:send():235] send: stats
+2022-02-28 18:37:48,543 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:37:48,543 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:38:01,620 DEBUG   SenderThread:67052 [sender.py:send():235] send: history
+2022-02-28 18:38:01,620 DEBUG   SenderThread:67052 [sender.py:send():235] send: summary
+2022-02-28 18:38:01,621 INFO    SenderThread:67052 [sender.py:_save_file():944] saving file wandb-summary.json with policy end
+2022-02-28 18:38:01,807 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/wandb-summary.json
+2022-02-28 18:38:02,809 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/output.log
+2022-02-28 18:38:03,641 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:38:03,641 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:38:15,909 DEBUG   SenderThread:67052 [sender.py:send():235] send: stats
+2022-02-28 18:38:18,741 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:38:18,741 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:38:32,028 DEBUG   SenderThread:67052 [sender.py:send():235] send: history
+2022-02-28 18:38:32,029 DEBUG   SenderThread:67052 [sender.py:send():235] send: summary
+2022-02-28 18:38:32,029 INFO    SenderThread:67052 [sender.py:_save_file():944] saving file wandb-summary.json with policy end
+2022-02-28 18:38:32,904 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/wandb-summary.json
+2022-02-28 18:38:32,904 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/output.log
+2022-02-28 18:38:33,844 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:38:33,845 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:38:46,784 DEBUG   SenderThread:67052 [sender.py:send():235] send: stats
+2022-02-28 18:38:48,934 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:38:48,935 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:39:03,673 DEBUG   SenderThread:67052 [sender.py:send():235] send: history
+2022-02-28 18:39:03,673 DEBUG   SenderThread:67052 [sender.py:send():235] send: summary
+2022-02-28 18:39:03,674 INFO    SenderThread:67052 [sender.py:_save_file():944] saving file wandb-summary.json with policy end
+2022-02-28 18:39:04,006 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/wandb-summary.json
+2022-02-28 18:39:04,027 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:39:04,028 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:39:05,009 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/output.log
+2022-02-28 18:39:17,736 DEBUG   SenderThread:67052 [sender.py:send():235] send: stats
+2022-02-28 18:39:19,164 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:39:19,164 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:39:34,259 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:39:34,259 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:39:34,845 DEBUG   SenderThread:67052 [sender.py:send():235] send: history
+2022-02-28 18:39:34,845 DEBUG   SenderThread:67052 [sender.py:send():235] send: summary
+2022-02-28 18:39:34,845 INFO    SenderThread:67052 [sender.py:_save_file():944] saving file wandb-summary.json with policy end
+2022-02-28 18:39:35,117 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/wandb-summary.json
+2022-02-28 18:39:37,125 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/output.log
+2022-02-28 18:39:48,798 DEBUG   SenderThread:67052 [sender.py:send():235] send: stats
+2022-02-28 18:39:49,363 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:39:49,363 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:40:04,734 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:40:04,735 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:40:06,778 DEBUG   SenderThread:67052 [sender.py:send():235] send: history
+2022-02-28 18:40:06,779 DEBUG   SenderThread:67052 [sender.py:send():235] send: summary
+2022-02-28 18:40:06,779 INFO    SenderThread:67052 [sender.py:_save_file():944] saving file wandb-summary.json with policy end
+2022-02-28 18:40:07,233 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/wandb-summary.json
+2022-02-28 18:40:07,234 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/output.log
+2022-02-28 18:40:19,831 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:40:19,831 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:40:19,927 DEBUG   SenderThread:67052 [sender.py:send():235] send: stats
+2022-02-28 18:40:34,930 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:40:34,931 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:40:36,505 DEBUG   SenderThread:67052 [sender.py:send():235] send: history
+2022-02-28 18:40:36,505 DEBUG   SenderThread:67052 [sender.py:send():235] send: summary
+2022-02-28 18:40:36,506 INFO    SenderThread:67052 [sender.py:_save_file():944] saving file wandb-summary.json with policy end
+2022-02-28 18:40:37,335 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/wandb-summary.json
+2022-02-28 18:40:37,335 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/output.log
+2022-02-28 18:40:50,044 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:40:50,045 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:40:50,908 DEBUG   SenderThread:67052 [sender.py:send():235] send: stats
+2022-02-28 18:41:05,170 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:41:05,171 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:41:09,362 DEBUG   SenderThread:67052 [sender.py:send():235] send: history
+2022-02-28 18:41:09,362 DEBUG   SenderThread:67052 [sender.py:send():235] send: summary
+2022-02-28 18:41:09,364 INFO    SenderThread:67052 [sender.py:_save_file():944] saving file wandb-summary.json with policy end
+2022-02-28 18:41:09,463 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/wandb-summary.json
+2022-02-28 18:41:11,470 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/output.log
+2022-02-28 18:41:20,274 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:41:20,275 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:41:21,894 DEBUG   SenderThread:67052 [sender.py:send():235] send: stats
+2022-02-28 18:41:35,408 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:41:35,408 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:41:38,797 DEBUG   SenderThread:67052 [sender.py:send():235] send: history
+2022-02-28 18:41:38,797 DEBUG   SenderThread:67052 [sender.py:send():235] send: summary
+2022-02-28 18:41:38,798 INFO    SenderThread:67052 [sender.py:_save_file():944] saving file wandb-summary.json with policy end
+2022-02-28 18:41:39,576 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/wandb-summary.json
+2022-02-28 18:41:39,576 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/output.log
+2022-02-28 18:41:50,510 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:41:50,511 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:41:52,817 DEBUG   SenderThread:67052 [sender.py:send():235] send: stats
+2022-02-28 18:42:05,614 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:42:05,615 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:42:13,372 DEBUG   SenderThread:67052 [sender.py:send():235] send: history
+2022-02-28 18:42:13,373 DEBUG   SenderThread:67052 [sender.py:send():235] send: summary
+2022-02-28 18:42:13,373 INFO    SenderThread:67052 [sender.py:_save_file():944] saving file wandb-summary.json with policy end
+2022-02-28 18:42:13,704 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/wandb-summary.json
+2022-02-28 18:42:15,710 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/output.log
+2022-02-28 18:42:20,772 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:42:20,772 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:42:23,685 DEBUG   SenderThread:67052 [sender.py:send():235] send: stats
+2022-02-28 18:42:35,876 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:42:35,876 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:42:42,114 DEBUG   SenderThread:67052 [sender.py:send():235] send: history
+2022-02-28 18:42:42,114 DEBUG   SenderThread:67052 [sender.py:send():235] send: summary
+2022-02-28 18:42:42,115 INFO    SenderThread:67052 [sender.py:_save_file():944] saving file wandb-summary.json with policy end
+2022-02-28 18:42:42,800 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/wandb-summary.json
+2022-02-28 18:42:43,804 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/output.log
+2022-02-28 18:42:50,986 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:42:50,986 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:42:54,587 DEBUG   SenderThread:67052 [sender.py:send():235] send: stats
+2022-02-28 18:43:06,084 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:43:06,084 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:43:10,353 DEBUG   SenderThread:67052 [sender.py:send():235] send: history
+2022-02-28 18:43:10,354 DEBUG   SenderThread:67052 [sender.py:send():235] send: summary
+2022-02-28 18:43:10,354 INFO    SenderThread:67052 [sender.py:_save_file():944] saving file wandb-summary.json with policy end
+2022-02-28 18:43:10,900 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/wandb-summary.json
+2022-02-28 18:43:11,903 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/output.log
+2022-02-28 18:43:21,179 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:43:21,179 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:43:25,600 DEBUG   SenderThread:67052 [sender.py:send():235] send: stats
+2022-02-28 18:43:36,340 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:43:36,340 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:43:37,651 DEBUG   SenderThread:67052 [sender.py:send():235] send: history
+2022-02-28 18:43:37,651 DEBUG   SenderThread:67052 [sender.py:send():235] send: summary
+2022-02-28 18:43:37,652 INFO    SenderThread:67052 [sender.py:_save_file():944] saving file wandb-summary.json with policy end
+2022-02-28 18:43:37,999 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/wandb-summary.json
+2022-02-28 18:43:40,008 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/output.log
+2022-02-28 18:43:51,446 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:43:51,446 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:43:56,639 DEBUG   SenderThread:67052 [sender.py:send():235] send: stats
+2022-02-28 18:44:04,847 DEBUG   SenderThread:67052 [sender.py:send():235] send: history
+2022-02-28 18:44:04,848 DEBUG   SenderThread:67052 [sender.py:send():235] send: summary
+2022-02-28 18:44:04,848 INFO    SenderThread:67052 [sender.py:_save_file():944] saving file wandb-summary.json with policy end
+2022-02-28 18:44:05,033 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/wandb-summary.json
+2022-02-28 18:44:06,038 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/output.log
+2022-02-28 18:44:06,486 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:44:06,486 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:44:21,612 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:44:21,612 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:44:27,597 DEBUG   SenderThread:67052 [sender.py:send():235] send: stats
+2022-02-28 18:44:33,243 DEBUG   SenderThread:67052 [sender.py:send():235] send: history
+2022-02-28 18:44:33,244 DEBUG   SenderThread:67052 [sender.py:send():235] send: summary
+2022-02-28 18:44:33,244 INFO    SenderThread:67052 [sender.py:_save_file():944] saving file wandb-summary.json with policy end
+2022-02-28 18:44:34,140 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/wandb-summary.json
+2022-02-28 18:44:36,145 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/output.log
+2022-02-28 18:44:36,732 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:44:36,733 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:44:51,890 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:44:51,890 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:44:58,483 DEBUG   SenderThread:67052 [sender.py:send():235] send: stats
+2022-02-28 18:45:01,385 DEBUG   SenderThread:67052 [sender.py:send():235] send: history
+2022-02-28 18:45:01,385 DEBUG   SenderThread:67052 [sender.py:send():235] send: summary
+2022-02-28 18:45:01,386 INFO    SenderThread:67052 [sender.py:_save_file():944] saving file wandb-summary.json with policy end
+2022-02-28 18:45:02,215 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/wandb-summary.json
+2022-02-28 18:45:04,221 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/output.log
+2022-02-28 18:45:06,994 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:45:06,995 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:45:22,104 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:45:22,104 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:45:27,829 DEBUG   SenderThread:67052 [sender.py:send():235] send: history
+2022-02-28 18:45:27,830 DEBUG   SenderThread:67052 [sender.py:send():235] send: summary
+2022-02-28 18:45:27,830 INFO    SenderThread:67052 [sender.py:_save_file():944] saving file wandb-summary.json with policy end
+2022-02-28 18:45:28,307 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/wandb-summary.json
+2022-02-28 18:45:29,308 DEBUG   SenderThread:67052 [sender.py:send():235] send: stats
+2022-02-28 18:45:30,314 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/output.log
+2022-02-28 18:45:37,198 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:45:37,198 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:45:52,303 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:45:52,303 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:45:54,355 DEBUG   SenderThread:67052 [sender.py:send():235] send: history
+2022-02-28 18:45:54,355 DEBUG   SenderThread:67052 [sender.py:send():235] send: summary
+2022-02-28 18:45:54,356 INFO    SenderThread:67052 [sender.py:_save_file():944] saving file wandb-summary.json with policy end
+2022-02-28 18:45:54,385 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/wandb-summary.json
+2022-02-28 18:45:56,387 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/output.log
+2022-02-28 18:46:00,070 DEBUG   SenderThread:67052 [sender.py:send():235] send: stats
+2022-02-28 18:46:07,428 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:46:07,428 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:46:22,532 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:46:22,532 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:46:22,643 DEBUG   SenderThread:67052 [sender.py:send():235] send: history
+2022-02-28 18:46:22,644 DEBUG   SenderThread:67052 [sender.py:send():235] send: summary
+2022-02-28 18:46:22,644 INFO    SenderThread:67052 [sender.py:_save_file():944] saving file wandb-summary.json with policy end
+2022-02-28 18:46:23,481 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/wandb-summary.json
+2022-02-28 18:46:24,485 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/output.log
+2022-02-28 18:46:31,069 DEBUG   SenderThread:67052 [sender.py:send():235] send: stats
+2022-02-28 18:46:37,648 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:46:37,648 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:46:49,406 DEBUG   SenderThread:67052 [sender.py:send():235] send: history
+2022-02-28 18:46:49,406 DEBUG   SenderThread:67052 [sender.py:send():235] send: summary
+2022-02-28 18:46:49,407 INFO    SenderThread:67052 [sender.py:_save_file():944] saving file wandb-summary.json with policy end
+2022-02-28 18:46:49,583 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/wandb-summary.json
+2022-02-28 18:46:52,597 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/output.log
+2022-02-28 18:46:52,749 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:46:52,749 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:47:02,155 DEBUG   SenderThread:67052 [sender.py:send():235] send: stats
+2022-02-28 18:47:07,845 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:47:07,846 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:47:14,971 DEBUG   SenderThread:67052 [sender.py:send():235] send: history
+2022-02-28 18:47:14,972 DEBUG   SenderThread:67052 [sender.py:send():235] send: summary
+2022-02-28 18:47:14,972 INFO    SenderThread:67052 [sender.py:_save_file():944] saving file wandb-summary.json with policy end
+2022-02-28 18:47:15,674 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/wandb-summary.json
+2022-02-28 18:47:16,678 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/output.log
+2022-02-28 18:47:22,939 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:47:22,939 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:47:33,207 DEBUG   SenderThread:67052 [sender.py:send():235] send: stats
+2022-02-28 18:47:38,054 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:47:38,054 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:47:42,127 DEBUG   SenderThread:67052 [sender.py:send():235] send: history
+2022-02-28 18:47:42,127 DEBUG   SenderThread:67052 [sender.py:send():235] send: summary
+2022-02-28 18:47:42,128 INFO    SenderThread:67052 [sender.py:_save_file():944] saving file wandb-summary.json with policy end
+2022-02-28 18:47:42,757 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/wandb-summary.json
+2022-02-28 18:47:44,766 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/output.log
+2022-02-28 18:47:53,157 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:47:53,157 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:48:04,071 DEBUG   SenderThread:67052 [sender.py:send():235] send: stats
+2022-02-28 18:48:08,257 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:48:08,257 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:48:09,221 DEBUG   SenderThread:67052 [sender.py:send():235] send: history
+2022-02-28 18:48:09,221 DEBUG   SenderThread:67052 [sender.py:send():235] send: summary
+2022-02-28 18:48:09,222 INFO    SenderThread:67052 [sender.py:_save_file():944] saving file wandb-summary.json with policy end
+2022-02-28 18:48:09,841 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/wandb-summary.json
+2022-02-28 18:48:09,841 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/output.log
+2022-02-28 18:48:23,352 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:48:23,352 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:48:35,723 DEBUG   SenderThread:67052 [sender.py:send():235] send: stats
+2022-02-28 18:48:35,952 DEBUG   SenderThread:67052 [sender.py:send():235] send: history
+2022-02-28 18:48:35,952 DEBUG   SenderThread:67052 [sender.py:send():235] send: summary
+2022-02-28 18:48:35,953 INFO    SenderThread:67052 [sender.py:_save_file():944] saving file wandb-summary.json with policy end
+2022-02-28 18:48:36,007 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/wandb-summary.json
+2022-02-28 18:48:38,025 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/output.log
+2022-02-28 18:48:38,450 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:48:38,450 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:48:53,555 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:48:53,555 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:49:02,331 DEBUG   SenderThread:67052 [sender.py:send():235] send: history
+2022-02-28 18:49:02,331 DEBUG   SenderThread:67052 [sender.py:send():235] send: summary
+2022-02-28 18:49:02,332 INFO    SenderThread:67052 [sender.py:_save_file():944] saving file wandb-summary.json with policy end
+2022-02-28 18:49:03,208 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/wandb-summary.json
+2022-02-28 18:49:04,219 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/output.log
+2022-02-28 18:49:07,711 DEBUG   SenderThread:67052 [sender.py:send():235] send: stats
+2022-02-28 18:49:08,649 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:49:08,649 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:49:23,758 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:49:23,759 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:49:28,945 DEBUG   SenderThread:67052 [sender.py:send():235] send: history
+2022-02-28 18:49:28,945 DEBUG   SenderThread:67052 [sender.py:send():235] send: summary
+2022-02-28 18:49:28,946 INFO    SenderThread:67052 [sender.py:_save_file():944] saving file wandb-summary.json with policy end
+2022-02-28 18:49:29,407 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/wandb-summary.json
+2022-02-28 18:49:30,414 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/output.log
+2022-02-28 18:49:38,862 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:49:38,862 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:49:39,845 DEBUG   SenderThread:67052 [sender.py:send():235] send: stats
+2022-02-28 18:49:53,970 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:49:53,970 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:49:56,728 DEBUG   SenderThread:67052 [sender.py:send():235] send: history
+2022-02-28 18:49:56,728 DEBUG   SenderThread:67052 [sender.py:send():235] send: summary
+2022-02-28 18:49:56,729 INFO    SenderThread:67052 [sender.py:_save_file():944] saving file wandb-summary.json with policy end
+2022-02-28 18:49:57,630 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/wandb-summary.json
+2022-02-28 18:49:58,638 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/output.log
+2022-02-28 18:50:09,078 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:50:09,079 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:50:11,990 DEBUG   SenderThread:67052 [sender.py:send():235] send: stats
+2022-02-28 18:50:23,390 DEBUG   SenderThread:67052 [sender.py:send():235] send: history
+2022-02-28 18:50:23,390 DEBUG   SenderThread:67052 [sender.py:send():235] send: summary
+2022-02-28 18:50:23,391 INFO    SenderThread:67052 [sender.py:_save_file():944] saving file wandb-summary.json with policy end
+2022-02-28 18:50:23,837 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/wandb-summary.json
+2022-02-28 18:50:24,174 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:50:24,175 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:50:24,846 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/output.log
+2022-02-28 18:50:39,281 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:50:39,281 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:50:44,122 DEBUG   SenderThread:67052 [sender.py:send():235] send: stats
+2022-02-28 18:50:52,638 DEBUG   SenderThread:67052 [sender.py:send():235] send: history
+2022-02-28 18:50:52,638 DEBUG   SenderThread:67052 [sender.py:send():235] send: summary
+2022-02-28 18:50:52,638 INFO    SenderThread:67052 [sender.py:_save_file():944] saving file wandb-summary.json with policy end
+2022-02-28 18:50:53,058 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/wandb-summary.json
+2022-02-28 18:50:54,389 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:50:54,389 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:50:55,069 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/output.log
+2022-02-28 18:51:09,584 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:51:09,584 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:51:15,371 DEBUG   SenderThread:67052 [sender.py:send():235] send: stats
+2022-02-28 18:51:21,287 DEBUG   SenderThread:67052 [sender.py:send():235] send: history
+2022-02-28 18:51:21,287 DEBUG   SenderThread:67052 [sender.py:send():235] send: summary
+2022-02-28 18:51:21,288 INFO    SenderThread:67052 [sender.py:_save_file():944] saving file wandb-summary.json with policy end
+2022-02-28 18:51:22,170 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/wandb-summary.json
+2022-02-28 18:51:23,174 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/output.log
+2022-02-28 18:51:24,741 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:51:24,741 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:51:39,830 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:51:39,830 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:51:46,343 DEBUG   SenderThread:67052 [sender.py:send():235] send: stats
+2022-02-28 18:51:48,543 DEBUG   SenderThread:67052 [sender.py:send():235] send: history
+2022-02-28 18:51:48,543 DEBUG   SenderThread:67052 [sender.py:send():235] send: summary
+2022-02-28 18:51:48,543 INFO    SenderThread:67052 [sender.py:_save_file():944] saving file wandb-summary.json with policy end
+2022-02-28 18:51:49,249 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/wandb-summary.json
+2022-02-28 18:51:51,251 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/output.log
+2022-02-28 18:51:54,924 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:51:54,924 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:52:10,023 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:52:10,024 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:52:15,945 DEBUG   SenderThread:67052 [sender.py:send():235] send: history
+2022-02-28 18:52:15,945 DEBUG   SenderThread:67052 [sender.py:send():235] send: summary
+2022-02-28 18:52:15,946 INFO    SenderThread:67052 [sender.py:_save_file():944] saving file wandb-summary.json with policy end
+2022-02-28 18:52:16,327 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/wandb-summary.json
+2022-02-28 18:52:17,236 DEBUG   SenderThread:67052 [sender.py:send():235] send: stats
+2022-02-28 18:52:17,331 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/output.log
+2022-02-28 18:52:25,117 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:52:25,117 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:52:40,226 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:52:40,226 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:52:42,551 DEBUG   SenderThread:67052 [sender.py:send():235] send: history
+2022-02-28 18:52:42,551 DEBUG   SenderThread:67052 [sender.py:send():235] send: summary
+2022-02-28 18:52:42,551 INFO    SenderThread:67052 [sender.py:_save_file():944] saving file wandb-summary.json with policy end
+2022-02-28 18:52:43,424 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/wandb-summary.json
+2022-02-28 18:52:45,431 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/output.log
+2022-02-28 18:52:48,063 DEBUG   SenderThread:67052 [sender.py:send():235] send: stats
+2022-02-28 18:52:55,326 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:52:55,327 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:53:10,424 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:53:10,424 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:53:10,518 DEBUG   SenderThread:67052 [sender.py:send():235] send: history
+2022-02-28 18:53:10,519 DEBUG   SenderThread:67052 [sender.py:send():235] send: summary
+2022-02-28 18:53:10,519 INFO    SenderThread:67052 [sender.py:_save_file():944] saving file wandb-summary.json with policy end
+2022-02-28 18:53:11,512 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/wandb-summary.json
+2022-02-28 18:53:13,517 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/output.log
+2022-02-28 18:53:19,073 DEBUG   SenderThread:67052 [sender.py:send():235] send: stats
+2022-02-28 18:53:25,524 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:53:25,525 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:53:38,926 DEBUG   SenderThread:67052 [sender.py:send():235] send: history
+2022-02-28 18:53:38,927 DEBUG   SenderThread:67052 [sender.py:send():235] send: summary
+2022-02-28 18:53:38,927 INFO    SenderThread:67052 [sender.py:_save_file():944] saving file wandb-summary.json with policy end
+2022-02-28 18:53:39,596 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/wandb-summary.json
+2022-02-28 18:53:40,627 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:53:40,627 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:53:41,603 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/output.log
+2022-02-28 18:53:50,125 DEBUG   SenderThread:67052 [sender.py:send():235] send: stats
+2022-02-28 18:53:55,759 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:53:55,759 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:54:05,996 DEBUG   SenderThread:67052 [sender.py:send():235] send: history
+2022-02-28 18:54:05,997 DEBUG   SenderThread:67052 [sender.py:send():235] send: summary
+2022-02-28 18:54:05,997 INFO    SenderThread:67052 [sender.py:_save_file():944] saving file wandb-summary.json with policy end
+2022-02-28 18:54:06,692 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/wandb-summary.json
+2022-02-28 18:54:07,696 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/output.log
+2022-02-28 18:54:10,857 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:54:10,857 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:54:21,244 DEBUG   SenderThread:67052 [sender.py:send():235] send: stats
+2022-02-28 18:54:25,988 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:54:25,989 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:54:36,441 DEBUG   SenderThread:67052 [sender.py:send():235] send: history
+2022-02-28 18:54:36,441 DEBUG   SenderThread:67052 [sender.py:send():235] send: summary
+2022-02-28 18:54:36,442 INFO    SenderThread:67052 [sender.py:_save_file():944] saving file wandb-summary.json with policy end
+2022-02-28 18:54:36,796 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/wandb-summary.json
+2022-02-28 18:54:38,800 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/output.log
+2022-02-28 18:54:41,093 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:54:41,093 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:54:52,289 DEBUG   SenderThread:67052 [sender.py:send():235] send: stats
+2022-02-28 18:54:56,208 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:54:56,209 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:55:04,003 DEBUG   SenderThread:67052 [sender.py:send():235] send: history
+2022-02-28 18:55:04,003 DEBUG   SenderThread:67052 [sender.py:send():235] send: summary
+2022-02-28 18:55:04,004 INFO    SenderThread:67052 [sender.py:_save_file():944] saving file wandb-summary.json with policy end
+2022-02-28 18:55:04,893 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/wandb-summary.json
+2022-02-28 18:55:04,893 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/output.log
+2022-02-28 18:55:11,301 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:55:11,302 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:55:23,178 DEBUG   SenderThread:67052 [sender.py:send():235] send: stats
+2022-02-28 18:55:26,406 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:55:26,406 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:55:30,050 DEBUG   SenderThread:67052 [sender.py:send():235] send: history
+2022-02-28 18:55:30,050 DEBUG   SenderThread:67052 [sender.py:send():235] send: summary
+2022-02-28 18:55:30,051 INFO    SenderThread:67052 [sender.py:_save_file():944] saving file wandb-summary.json with policy end
+2022-02-28 18:55:30,973 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/wandb-summary.json
+2022-02-28 18:55:30,973 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/output.log
+2022-02-28 18:55:41,513 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:55:41,513 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:55:53,963 DEBUG   SenderThread:67052 [sender.py:send():235] send: stats
+2022-02-28 18:55:56,628 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:55:56,629 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:55:57,120 DEBUG   SenderThread:67052 [sender.py:send():235] send: history
+2022-02-28 18:55:57,121 DEBUG   SenderThread:67052 [sender.py:send():235] send: summary
+2022-02-28 18:55:57,121 INFO    SenderThread:67052 [sender.py:_save_file():944] saving file wandb-summary.json with policy end
+2022-02-28 18:55:58,068 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/wandb-summary.json
+2022-02-28 18:55:59,069 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/output.log
+2022-02-28 18:56:11,720 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:56:11,720 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:56:24,899 DEBUG   SenderThread:67052 [sender.py:send():235] send: stats
+2022-02-28 18:56:25,634 DEBUG   SenderThread:67052 [sender.py:send():235] send: history
+2022-02-28 18:56:25,635 DEBUG   SenderThread:67052 [sender.py:send():235] send: summary
+2022-02-28 18:56:25,635 INFO    SenderThread:67052 [sender.py:_save_file():944] saving file wandb-summary.json with policy end
+2022-02-28 18:56:26,157 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/wandb-summary.json
+2022-02-28 18:56:26,816 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:56:26,816 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:56:27,161 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/output.log
+2022-02-28 18:56:41,912 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:56:41,912 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:56:52,630 DEBUG   SenderThread:67052 [sender.py:send():235] send: history
+2022-02-28 18:56:52,631 DEBUG   SenderThread:67052 [sender.py:send():235] send: summary
+2022-02-28 18:56:52,631 INFO    SenderThread:67052 [sender.py:_save_file():944] saving file wandb-summary.json with policy end
+2022-02-28 18:56:53,240 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/wandb-summary.json
+2022-02-28 18:56:53,240 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/output.log
+2022-02-28 18:56:55,880 DEBUG   SenderThread:67052 [sender.py:send():235] send: stats
+2022-02-28 18:56:57,006 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:56:57,007 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:56:58,256 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/output.log
+2022-02-28 18:56:59,257 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/output.log
+2022-02-28 18:57:01,266 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/output.log
+2022-02-28 18:57:05,283 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/output.log
+2022-02-28 18:57:07,289 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/output.log
+2022-02-28 18:57:11,307 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/output.log
+2022-02-28 18:57:12,129 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:57:12,129 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:57:15,321 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/output.log
+2022-02-28 18:57:19,333 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/output.log
+2022-02-28 18:57:21,337 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/output.log
+2022-02-28 18:57:23,344 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/output.log
+2022-02-28 18:57:26,957 DEBUG   SenderThread:67052 [sender.py:send():235] send: stats
+2022-02-28 18:57:27,313 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:57:27,313 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:57:27,358 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/output.log
+2022-02-28 18:57:31,376 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/output.log
+2022-02-28 18:57:35,396 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/output.log
+2022-02-28 18:57:37,401 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/output.log
+2022-02-28 18:57:39,407 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/output.log
+2022-02-28 18:57:42,576 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:57:42,576 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:57:43,425 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/output.log
+2022-02-28 18:57:47,440 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/output.log
+2022-02-28 18:57:51,455 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/output.log
+2022-02-28 18:57:53,460 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/output.log
+2022-02-28 18:57:54,463 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/output.log
+2022-02-28 18:57:55,468 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/output.log
+2022-02-28 18:57:56,473 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/output.log
+2022-02-28 18:57:57,677 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-28 18:57:57,677 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: stop_status
+2022-02-28 18:57:58,048 DEBUG   SenderThread:67052 [sender.py:send():235] send: stats
+2022-02-28 18:58:01,493 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/output.log
+2022-02-28 18:58:02,426 DEBUG   SenderThread:67052 [sender.py:send():235] send: telemetry
+2022-02-28 18:58:02,427 DEBUG   SenderThread:67052 [sender.py:send():235] send: exit
+2022-02-28 18:58:02,427 INFO    SenderThread:67052 [sender.py:send_exit():371] handling exit code: 0
+2022-02-28 18:58:02,428 INFO    SenderThread:67052 [sender.py:send_exit():373] handling runtime: 3973
+2022-02-28 18:58:02,428 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: poll_exit
+2022-02-28 18:58:02,429 INFO    SenderThread:67052 [sender.py:_save_file():944] saving file wandb-summary.json with policy end
+2022-02-28 18:58:02,429 INFO    SenderThread:67052 [sender.py:send_exit():379] send defer
+2022-02-28 18:58:02,430 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: poll_exit
+2022-02-28 18:58:02,430 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: defer
+2022-02-28 18:58:02,431 INFO    HandlerThread:67052 [handler.py:handle_request_defer():154] handle defer: 0
+2022-02-28 18:58:02,431 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: defer
+2022-02-28 18:58:02,431 INFO    SenderThread:67052 [sender.py:send_request_defer():388] handle sender defer: 0
+2022-02-28 18:58:02,431 INFO    SenderThread:67052 [sender.py:transition_state():392] send defer: 1
+2022-02-28 18:58:02,432 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: defer
+2022-02-28 18:58:02,432 INFO    HandlerThread:67052 [handler.py:handle_request_defer():154] handle defer: 1
+2022-02-28 18:58:02,499 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/wandb-summary.json
+2022-02-28 18:58:02,500 INFO    Thread-8  :67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/output.log
+2022-02-28 18:58:02,516 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: defer
+2022-02-28 18:58:02,516 INFO    SenderThread:67052 [sender.py:send_request_defer():388] handle sender defer: 1
+2022-02-28 18:58:02,516 INFO    SenderThread:67052 [sender.py:transition_state():392] send defer: 2
+2022-02-28 18:58:02,516 DEBUG   SenderThread:67052 [sender.py:send():235] send: stats
+2022-02-28 18:58:02,517 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: defer
+2022-02-28 18:58:02,517 INFO    HandlerThread:67052 [handler.py:handle_request_defer():154] handle defer: 2
+2022-02-28 18:58:02,517 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: defer
+2022-02-28 18:58:02,518 INFO    SenderThread:67052 [sender.py:send_request_defer():388] handle sender defer: 2
+2022-02-28 18:58:02,518 INFO    SenderThread:67052 [sender.py:transition_state():392] send defer: 3
+2022-02-28 18:58:02,518 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: defer
+2022-02-28 18:58:02,519 INFO    HandlerThread:67052 [handler.py:handle_request_defer():154] handle defer: 3
+2022-02-28 18:58:02,519 DEBUG   SenderThread:67052 [sender.py:send():235] send: summary
+2022-02-28 18:58:02,520 INFO    SenderThread:67052 [sender.py:_save_file():944] saving file wandb-summary.json with policy end
+2022-02-28 18:58:02,521 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: defer
+2022-02-28 18:58:02,521 INFO    SenderThread:67052 [sender.py:send_request_defer():388] handle sender defer: 3
+2022-02-28 18:58:02,521 INFO    SenderThread:67052 [sender.py:transition_state():392] send defer: 4
+2022-02-28 18:58:02,521 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: defer
+2022-02-28 18:58:02,521 INFO    HandlerThread:67052 [handler.py:handle_request_defer():154] handle defer: 4
+2022-02-28 18:58:02,522 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: defer
+2022-02-28 18:58:02,522 INFO    SenderThread:67052 [sender.py:send_request_defer():388] handle sender defer: 4
+2022-02-28 18:58:02,532 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: poll_exit
+2022-02-28 18:58:02,662 INFO    SenderThread:67052 [sender.py:transition_state():392] send defer: 5
+2022-02-28 18:58:02,662 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: poll_exit
+2022-02-28 18:58:02,663 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: defer
+2022-02-28 18:58:02,663 INFO    HandlerThread:67052 [handler.py:handle_request_defer():154] handle defer: 5
+2022-02-28 18:58:02,663 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: defer
+2022-02-28 18:58:02,663 INFO    SenderThread:67052 [sender.py:send_request_defer():388] handle sender defer: 5
+2022-02-28 18:58:02,663 INFO    SenderThread:67052 [dir_watcher.py:finish():283] shutting down directory watcher
+2022-02-28 18:58:02,766 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: poll_exit
+2022-02-28 18:58:03,505 INFO    SenderThread:67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/config.yaml
+2022-02-28 18:58:03,511 INFO    SenderThread:67052 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/wandb-summary.json
+2022-02-28 18:58:03,511 INFO    SenderThread:67052 [dir_watcher.py:finish():313] scan: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files
+2022-02-28 18:58:03,512 INFO    SenderThread:67052 [dir_watcher.py:finish():327] scan save: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/requirements.txt requirements.txt
+2022-02-28 18:58:03,513 INFO    SenderThread:67052 [dir_watcher.py:finish():327] scan save: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/output.log output.log
+2022-02-28 18:58:03,517 INFO    SenderThread:67052 [dir_watcher.py:finish():327] scan save: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/config.yaml config.yaml
+2022-02-28 18:58:03,518 INFO    SenderThread:67052 [dir_watcher.py:finish():327] scan save: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/wandb-summary.json wandb-summary.json
+2022-02-28 18:58:03,526 INFO    SenderThread:67052 [dir_watcher.py:finish():327] scan save: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/wandb-metadata.json wandb-metadata.json
+2022-02-28 18:58:03,528 INFO    SenderThread:67052 [sender.py:transition_state():392] send defer: 6
+2022-02-28 18:58:03,528 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: poll_exit
+2022-02-28 18:58:03,530 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: defer
+2022-02-28 18:58:03,530 INFO    HandlerThread:67052 [handler.py:handle_request_defer():154] handle defer: 6
+2022-02-28 18:58:03,536 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: defer
+2022-02-28 18:58:03,536 INFO    SenderThread:67052 [sender.py:send_request_defer():388] handle sender defer: 6
+2022-02-28 18:58:03,536 INFO    SenderThread:67052 [file_pusher.py:finish():177] shutting down file pusher
+2022-02-28 18:58:03,631 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: poll_exit
+2022-02-28 18:58:03,631 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: poll_exit
+2022-02-28 18:58:03,734 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: poll_exit
+2022-02-28 18:58:03,734 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: poll_exit
+2022-02-28 18:58:03,836 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: poll_exit
+2022-02-28 18:58:03,836 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: poll_exit
+2022-02-28 18:58:03,939 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: poll_exit
+2022-02-28 18:58:03,939 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: poll_exit
+2022-02-28 18:58:04,040 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: poll_exit
+2022-02-28 18:58:04,041 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: poll_exit
+2022-02-28 18:58:04,103 INFO    Thread-14 :67052 [upload_job.py:push():137] Uploaded file /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/config.yaml
+2022-02-28 18:58:04,106 INFO    Thread-12 :67052 [upload_job.py:push():137] Uploaded file /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/requirements.txt
+2022-02-28 18:58:04,143 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: poll_exit
+2022-02-28 18:58:04,143 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: poll_exit
+2022-02-28 18:58:04,198 INFO    Thread-15 :67052 [upload_job.py:push():137] Uploaded file /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/wandb-summary.json
+2022-02-28 18:58:04,247 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: poll_exit
+2022-02-28 18:58:04,249 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: poll_exit
+2022-02-28 18:58:04,352 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: poll_exit
+2022-02-28 18:58:04,353 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: poll_exit
+2022-02-28 18:58:04,459 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: poll_exit
+2022-02-28 18:58:04,460 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: poll_exit
+2022-02-28 18:58:04,566 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: poll_exit
+2022-02-28 18:58:04,566 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: poll_exit
+2022-02-28 18:58:04,670 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: poll_exit
+2022-02-28 18:58:04,671 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: poll_exit
+2022-02-28 18:58:04,771 INFO    Thread-13 :67052 [upload_job.py:push():137] Uploaded file /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/files/output.log
+2022-02-28 18:58:04,773 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: poll_exit
+2022-02-28 18:58:04,774 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: poll_exit
+2022-02-28 18:58:04,878 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: poll_exit
+2022-02-28 18:58:04,880 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: poll_exit
+2022-02-28 18:58:04,975 INFO    Thread-7  :67052 [sender.py:transition_state():392] send defer: 7
+2022-02-28 18:58:04,976 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: defer
+2022-02-28 18:58:04,976 INFO    HandlerThread:67052 [handler.py:handle_request_defer():154] handle defer: 7
+2022-02-28 18:58:04,977 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: defer
+2022-02-28 18:58:04,977 INFO    SenderThread:67052 [sender.py:send_request_defer():388] handle sender defer: 7
+2022-02-28 18:58:04,983 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: poll_exit
+2022-02-28 18:58:05,232 INFO    SenderThread:67052 [sender.py:transition_state():392] send defer: 8
+2022-02-28 18:58:05,233 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: poll_exit
+2022-02-28 18:58:05,233 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: defer
+2022-02-28 18:58:05,234 INFO    HandlerThread:67052 [handler.py:handle_request_defer():154] handle defer: 8
+2022-02-28 18:58:05,234 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: defer
+2022-02-28 18:58:05,234 INFO    SenderThread:67052 [sender.py:send_request_defer():388] handle sender defer: 8
+2022-02-28 18:58:05,234 INFO    SenderThread:67052 [sender.py:transition_state():392] send defer: 9
+2022-02-28 18:58:05,236 DEBUG   SenderThread:67052 [sender.py:send():235] send: final
+2022-02-28 18:58:05,236 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: defer
+2022-02-28 18:58:05,236 DEBUG   SenderThread:67052 [sender.py:send():235] send: footer
+2022-02-28 18:58:05,237 INFO    HandlerThread:67052 [handler.py:handle_request_defer():154] handle defer: 9
+2022-02-28 18:58:05,237 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: defer
+2022-02-28 18:58:05,238 INFO    SenderThread:67052 [sender.py:send_request_defer():388] handle sender defer: 9
+2022-02-28 18:58:05,338 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: poll_exit
+2022-02-28 18:58:05,338 DEBUG   SenderThread:67052 [sender.py:send_request():249] send_request: poll_exit
+2022-02-28 18:58:05,338 INFO    SenderThread:67052 [file_pusher.py:join():182] waiting for file pusher
+2022-02-28 18:58:05,553 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: get_summary
+2022-02-28 18:58:05,556 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: sampled_history
+2022-02-28 18:58:05,558 DEBUG   HandlerThread:67052 [handler.py:handle_request():131] handle_request: shutdown
+2022-02-28 18:58:05,558 INFO    HandlerThread:67052 [handler.py:finish():739] shutting down handler
+2022-02-28 18:58:06,239 INFO    WriterThread:67052 [datastore.py:close():281] close: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220228_175147-3ntd2esp/run-3ntd2esp.wandb
+2022-02-28 18:58:06,553 INFO    SenderThread:67052 [sender.py:finish():1075] shutting down sender
+2022-02-28 18:58:06,554 INFO    SenderThread:67052 [file_pusher.py:finish():177] shutting down file pusher
+2022-02-28 18:58:06,554 INFO    SenderThread:67052 [file_pusher.py:join():182] waiting for file pusher
+2022-02-28 18:58:06,560 INFO    MainThread:67052 [internal.py:handle_exit():79] Internal process exited

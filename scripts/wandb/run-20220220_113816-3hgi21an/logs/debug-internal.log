@@ -1,0 +1,137 @@
+2022-02-20 11:38:17,098 INFO    MainThread:85747 [internal.py:wandb_internal():89] W&B internal server running at pid: 85747, started at: 2022-02-20 11:38:17.098038
+2022-02-20 11:38:17,099 INFO    WriterThread:85747 [datastore.py:open_for_write():77] open: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220220_113816-3hgi21an/run-3hgi21an.wandb
+2022-02-20 11:38:17,102 DEBUG   HandlerThread:85747 [handler.py:handle_request():131] handle_request: check_version
+2022-02-20 11:38:17,103 DEBUG   SenderThread:85747 [sender.py:send():235] send: header
+2022-02-20 11:38:17,104 DEBUG   SenderThread:85747 [sender.py:send_request():249] send_request: check_version
+2022-02-20 11:38:17,215 DEBUG   SenderThread:85747 [sender.py:send():235] send: run
+2022-02-20 11:38:17,363 INFO    SenderThread:85747 [dir_watcher.py:__init__():169] watching files in: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220220_113816-3hgi21an/files
+2022-02-20 11:38:17,363 INFO    SenderThread:85747 [sender.py:_start_run_threads():809] run started: 3hgi21an with start time 1645385896
+2022-02-20 11:38:17,363 DEBUG   SenderThread:85747 [sender.py:send():235] send: summary
+2022-02-20 11:38:17,364 INFO    SenderThread:85747 [sender.py:_save_file():944] saving file wandb-summary.json with policy end
+2022-02-20 11:38:17,366 DEBUG   HandlerThread:85747 [handler.py:handle_request():131] handle_request: run_start
+2022-02-20 11:38:17,368 DEBUG   HandlerThread:85747 [meta.py:__init__():36] meta init
+2022-02-20 11:38:17,368 DEBUG   HandlerThread:85747 [meta.py:__init__():50] meta init done
+2022-02-20 11:38:17,368 DEBUG   HandlerThread:85747 [meta.py:probe():210] probe
+2022-02-20 11:38:17,376 DEBUG   HandlerThread:85747 [meta.py:_setup_git():200] setup git
+2022-02-20 11:38:17,466 DEBUG   HandlerThread:85747 [meta.py:_setup_git():207] setup git done
+2022-02-20 11:38:17,466 DEBUG   HandlerThread:85747 [meta.py:_save_pip():54] save pip
+2022-02-20 11:38:17,468 DEBUG   HandlerThread:85747 [meta.py:_save_pip():68] save pip done
+2022-02-20 11:38:17,468 DEBUG   HandlerThread:85747 [meta.py:probe():248] probe done
+2022-02-20 11:38:17,527 DEBUG   SenderThread:85747 [sender.py:send():235] send: files
+2022-02-20 11:38:17,528 INFO    SenderThread:85747 [sender.py:_save_file():944] saving file wandb-metadata.json with policy now
+2022-02-20 11:38:17,534 DEBUG   HandlerThread:85747 [handler.py:handle_request():131] handle_request: stop_status
+2022-02-20 11:38:17,535 DEBUG   SenderThread:85747 [sender.py:send_request():249] send_request: stop_status
+2022-02-20 11:38:18,113 INFO    Thread-11 :85747 [upload_job.py:push():137] Uploaded file /var/folders/3d/8qgdr4hx35v7qrcywjzlsygr0000gq/T/tmpmu14u4j6wandb/3p3if9qk-wandb-metadata.json
+2022-02-20 11:38:18,368 INFO    Thread-8  :85747 [dir_watcher.py:_on_file_created():217] file/dir created: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220220_113816-3hgi21an/files/wandb-metadata.json
+2022-02-20 11:38:18,368 INFO    Thread-8  :85747 [dir_watcher.py:_on_file_created():217] file/dir created: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220220_113816-3hgi21an/files/output.log
+2022-02-20 11:38:18,369 INFO    Thread-8  :85747 [dir_watcher.py:_on_file_created():217] file/dir created: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220220_113816-3hgi21an/files/wandb-summary.json
+2022-02-20 11:38:18,369 INFO    Thread-8  :85747 [dir_watcher.py:_on_file_created():217] file/dir created: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220220_113816-3hgi21an/files/requirements.txt
+2022-02-20 11:38:20,070 DEBUG   SenderThread:85747 [sender.py:send():235] send: telemetry
+2022-02-20 11:38:20,070 DEBUG   HandlerThread:85747 [handler.py:handle_request():131] handle_request: poll_exit
+2022-02-20 11:38:20,071 DEBUG   SenderThread:85747 [sender.py:send():235] send: exit
+2022-02-20 11:38:20,071 INFO    SenderThread:85747 [sender.py:send_exit():371] handling exit code: 1
+2022-02-20 11:38:20,071 INFO    SenderThread:85747 [sender.py:send_exit():373] handling runtime: 2
+2022-02-20 11:38:20,072 INFO    SenderThread:85747 [sender.py:_save_file():944] saving file wandb-summary.json with policy end
+2022-02-20 11:38:20,072 INFO    SenderThread:85747 [sender.py:send_exit():379] send defer
+2022-02-20 11:38:20,073 DEBUG   SenderThread:85747 [sender.py:send_request():249] send_request: poll_exit
+2022-02-20 11:38:20,073 DEBUG   HandlerThread:85747 [handler.py:handle_request():131] handle_request: defer
+2022-02-20 11:38:20,073 INFO    HandlerThread:85747 [handler.py:handle_request_defer():154] handle defer: 0
+2022-02-20 11:38:20,074 DEBUG   SenderThread:85747 [sender.py:send_request():249] send_request: defer
+2022-02-20 11:38:20,074 INFO    SenderThread:85747 [sender.py:send_request_defer():388] handle sender defer: 0
+2022-02-20 11:38:20,074 INFO    SenderThread:85747 [sender.py:transition_state():392] send defer: 1
+2022-02-20 11:38:20,074 DEBUG   HandlerThread:85747 [handler.py:handle_request():131] handle_request: defer
+2022-02-20 11:38:20,075 INFO    HandlerThread:85747 [handler.py:handle_request_defer():154] handle defer: 1
+2022-02-20 11:38:20,085 DEBUG   SenderThread:85747 [sender.py:send_request():249] send_request: defer
+2022-02-20 11:38:20,085 INFO    SenderThread:85747 [sender.py:send_request_defer():388] handle sender defer: 1
+2022-02-20 11:38:20,086 INFO    SenderThread:85747 [sender.py:transition_state():392] send defer: 2
+2022-02-20 11:38:20,086 DEBUG   SenderThread:85747 [sender.py:send():235] send: stats
+2022-02-20 11:38:20,087 DEBUG   HandlerThread:85747 [handler.py:handle_request():131] handle_request: defer
+2022-02-20 11:38:20,087 INFO    HandlerThread:85747 [handler.py:handle_request_defer():154] handle defer: 2
+2022-02-20 11:38:20,088 DEBUG   SenderThread:85747 [sender.py:send_request():249] send_request: defer
+2022-02-20 11:38:20,088 INFO    SenderThread:85747 [sender.py:send_request_defer():388] handle sender defer: 2
+2022-02-20 11:38:20,088 INFO    SenderThread:85747 [sender.py:transition_state():392] send defer: 3
+2022-02-20 11:38:20,089 DEBUG   HandlerThread:85747 [handler.py:handle_request():131] handle_request: defer
+2022-02-20 11:38:20,089 INFO    HandlerThread:85747 [handler.py:handle_request_defer():154] handle defer: 3
+2022-02-20 11:38:20,089 DEBUG   SenderThread:85747 [sender.py:send():235] send: summary
+2022-02-20 11:38:20,090 INFO    SenderThread:85747 [sender.py:_save_file():944] saving file wandb-summary.json with policy end
+2022-02-20 11:38:20,090 DEBUG   SenderThread:85747 [sender.py:send_request():249] send_request: defer
+2022-02-20 11:38:20,091 INFO    SenderThread:85747 [sender.py:send_request_defer():388] handle sender defer: 3
+2022-02-20 11:38:20,091 INFO    SenderThread:85747 [sender.py:transition_state():392] send defer: 4
+2022-02-20 11:38:20,091 DEBUG   HandlerThread:85747 [handler.py:handle_request():131] handle_request: defer
+2022-02-20 11:38:20,091 INFO    HandlerThread:85747 [handler.py:handle_request_defer():154] handle defer: 4
+2022-02-20 11:38:20,091 DEBUG   SenderThread:85747 [sender.py:send_request():249] send_request: defer
+2022-02-20 11:38:20,092 INFO    SenderThread:85747 [sender.py:send_request_defer():388] handle sender defer: 4
+2022-02-20 11:38:20,175 DEBUG   HandlerThread:85747 [handler.py:handle_request():131] handle_request: poll_exit
+2022-02-20 11:38:20,232 INFO    SenderThread:85747 [sender.py:transition_state():392] send defer: 5
+2022-02-20 11:38:20,232 DEBUG   SenderThread:85747 [sender.py:send_request():249] send_request: poll_exit
+2022-02-20 11:38:20,233 DEBUG   HandlerThread:85747 [handler.py:handle_request():131] handle_request: defer
+2022-02-20 11:38:20,233 INFO    HandlerThread:85747 [handler.py:handle_request_defer():154] handle defer: 5
+2022-02-20 11:38:20,233 DEBUG   SenderThread:85747 [sender.py:send_request():249] send_request: defer
+2022-02-20 11:38:20,233 INFO    SenderThread:85747 [sender.py:send_request_defer():388] handle sender defer: 5
+2022-02-20 11:38:20,233 INFO    SenderThread:85747 [dir_watcher.py:finish():283] shutting down directory watcher
+2022-02-20 11:38:20,335 DEBUG   HandlerThread:85747 [handler.py:handle_request():131] handle_request: poll_exit
+2022-02-20 11:38:20,372 INFO    Thread-8  :85747 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220220_113816-3hgi21an/files/wandb-summary.json
+2022-02-20 11:38:20,373 INFO    SenderThread:85747 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220220_113816-3hgi21an/files/output.log
+2022-02-20 11:38:20,373 INFO    SenderThread:85747 [dir_watcher.py:_on_file_modified():230] file/dir modified: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220220_113816-3hgi21an/files/config.yaml
+2022-02-20 11:38:20,373 INFO    SenderThread:85747 [dir_watcher.py:finish():313] scan: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220220_113816-3hgi21an/files
+2022-02-20 11:38:20,374 INFO    SenderThread:85747 [dir_watcher.py:finish():327] scan save: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220220_113816-3hgi21an/files/requirements.txt requirements.txt
+2022-02-20 11:38:20,374 INFO    SenderThread:85747 [dir_watcher.py:finish():327] scan save: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220220_113816-3hgi21an/files/output.log output.log
+2022-02-20 11:38:20,374 INFO    SenderThread:85747 [dir_watcher.py:finish():327] scan save: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220220_113816-3hgi21an/files/config.yaml config.yaml
+2022-02-20 11:38:20,377 INFO    SenderThread:85747 [dir_watcher.py:finish():327] scan save: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220220_113816-3hgi21an/files/wandb-summary.json wandb-summary.json
+2022-02-20 11:38:20,382 INFO    SenderThread:85747 [dir_watcher.py:finish():327] scan save: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220220_113816-3hgi21an/files/wandb-metadata.json wandb-metadata.json
+2022-02-20 11:38:20,383 INFO    SenderThread:85747 [sender.py:transition_state():392] send defer: 6
+2022-02-20 11:38:20,384 DEBUG   SenderThread:85747 [sender.py:send_request():249] send_request: poll_exit
+2022-02-20 11:38:20,392 DEBUG   HandlerThread:85747 [handler.py:handle_request():131] handle_request: defer
+2022-02-20 11:38:20,392 INFO    HandlerThread:85747 [handler.py:handle_request_defer():154] handle defer: 6
+2022-02-20 11:38:20,393 DEBUG   SenderThread:85747 [sender.py:send_request():249] send_request: defer
+2022-02-20 11:38:20,393 INFO    SenderThread:85747 [sender.py:send_request_defer():388] handle sender defer: 6
+2022-02-20 11:38:20,394 INFO    SenderThread:85747 [file_pusher.py:finish():177] shutting down file pusher
+2022-02-20 11:38:20,496 DEBUG   HandlerThread:85747 [handler.py:handle_request():131] handle_request: poll_exit
+2022-02-20 11:38:20,496 DEBUG   SenderThread:85747 [sender.py:send_request():249] send_request: poll_exit
+2022-02-20 11:38:20,599 DEBUG   HandlerThread:85747 [handler.py:handle_request():131] handle_request: poll_exit
+2022-02-20 11:38:20,599 DEBUG   SenderThread:85747 [sender.py:send_request():249] send_request: poll_exit
+2022-02-20 11:38:20,702 DEBUG   HandlerThread:85747 [handler.py:handle_request():131] handle_request: poll_exit
+2022-02-20 11:38:20,702 DEBUG   SenderThread:85747 [sender.py:send_request():249] send_request: poll_exit
+2022-02-20 11:38:20,805 DEBUG   HandlerThread:85747 [handler.py:handle_request():131] handle_request: poll_exit
+2022-02-20 11:38:20,805 DEBUG   SenderThread:85747 [sender.py:send_request():249] send_request: poll_exit
+2022-02-20 11:38:20,907 DEBUG   HandlerThread:85747 [handler.py:handle_request():131] handle_request: poll_exit
+2022-02-20 11:38:20,908 DEBUG   SenderThread:85747 [sender.py:send_request():249] send_request: poll_exit
+2022-02-20 11:38:20,940 INFO    Thread-12 :85747 [upload_job.py:push():137] Uploaded file /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220220_113816-3hgi21an/files/requirements.txt
+2022-02-20 11:38:20,969 INFO    Thread-15 :85747 [upload_job.py:push():137] Uploaded file /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220220_113816-3hgi21an/files/wandb-summary.json
+2022-02-20 11:38:20,981 INFO    Thread-13 :85747 [upload_job.py:push():137] Uploaded file /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220220_113816-3hgi21an/files/output.log
+2022-02-20 11:38:20,987 INFO    Thread-14 :85747 [upload_job.py:push():137] Uploaded file /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220220_113816-3hgi21an/files/config.yaml
+2022-02-20 11:38:21,010 DEBUG   HandlerThread:85747 [handler.py:handle_request():131] handle_request: poll_exit
+2022-02-20 11:38:21,010 DEBUG   SenderThread:85747 [sender.py:send_request():249] send_request: poll_exit
+2022-02-20 11:38:21,112 DEBUG   HandlerThread:85747 [handler.py:handle_request():131] handle_request: poll_exit
+2022-02-20 11:38:21,112 DEBUG   SenderThread:85747 [sender.py:send_request():249] send_request: poll_exit
+2022-02-20 11:38:21,190 INFO    Thread-7  :85747 [sender.py:transition_state():392] send defer: 7
+2022-02-20 11:38:21,191 DEBUG   HandlerThread:85747 [handler.py:handle_request():131] handle_request: defer
+2022-02-20 11:38:21,192 INFO    HandlerThread:85747 [handler.py:handle_request_defer():154] handle defer: 7
+2022-02-20 11:38:21,192 DEBUG   SenderThread:85747 [sender.py:send_request():249] send_request: defer
+2022-02-20 11:38:21,192 INFO    SenderThread:85747 [sender.py:send_request_defer():388] handle sender defer: 7
+2022-02-20 11:38:21,213 DEBUG   HandlerThread:85747 [handler.py:handle_request():131] handle_request: poll_exit
+2022-02-20 11:38:21,422 INFO    SenderThread:85747 [sender.py:transition_state():392] send defer: 8
+2022-02-20 11:38:21,422 DEBUG   SenderThread:85747 [sender.py:send_request():249] send_request: poll_exit
+2022-02-20 11:38:21,424 DEBUG   HandlerThread:85747 [handler.py:handle_request():131] handle_request: defer
+2022-02-20 11:38:21,425 INFO    HandlerThread:85747 [handler.py:handle_request_defer():154] handle defer: 8
+2022-02-20 11:38:21,425 DEBUG   SenderThread:85747 [sender.py:send_request():249] send_request: defer
+2022-02-20 11:38:21,425 INFO    SenderThread:85747 [sender.py:send_request_defer():388] handle sender defer: 8
+2022-02-20 11:38:21,425 INFO    SenderThread:85747 [sender.py:transition_state():392] send defer: 9
+2022-02-20 11:38:21,426 DEBUG   SenderThread:85747 [sender.py:send():235] send: final
+2022-02-20 11:38:21,426 DEBUG   SenderThread:85747 [sender.py:send():235] send: footer
+2022-02-20 11:38:21,426 DEBUG   HandlerThread:85747 [handler.py:handle_request():131] handle_request: defer
+2022-02-20 11:38:21,426 INFO    HandlerThread:85747 [handler.py:handle_request_defer():154] handle defer: 9
+2022-02-20 11:38:21,427 DEBUG   SenderThread:85747 [sender.py:send_request():249] send_request: defer
+2022-02-20 11:38:21,427 INFO    SenderThread:85747 [sender.py:send_request_defer():388] handle sender defer: 9
+2022-02-20 11:38:21,526 DEBUG   HandlerThread:85747 [handler.py:handle_request():131] handle_request: poll_exit
+2022-02-20 11:38:21,526 DEBUG   SenderThread:85747 [sender.py:send_request():249] send_request: poll_exit
+2022-02-20 11:38:21,526 INFO    SenderThread:85747 [file_pusher.py:join():182] waiting for file pusher
+2022-02-20 11:38:21,737 DEBUG   HandlerThread:85747 [handler.py:handle_request():131] handle_request: get_summary
+2022-02-20 11:38:21,738 DEBUG   HandlerThread:85747 [handler.py:handle_request():131] handle_request: sampled_history
+2022-02-20 11:38:21,739 DEBUG   HandlerThread:85747 [handler.py:handle_request():131] handle_request: shutdown
+2022-02-20 11:38:21,739 INFO    HandlerThread:85747 [handler.py:finish():739] shutting down handler
+2022-02-20 11:38:22,429 INFO    WriterThread:85747 [datastore.py:close():281] close: /Users/visakkumar/Desktop/reactive/highway-env/scripts/wandb/run-20220220_113816-3hgi21an/run-3hgi21an.wandb
+2022-02-20 11:38:22,738 INFO    SenderThread:85747 [sender.py:finish():1075] shutting down sender
+2022-02-20 11:38:22,739 INFO    SenderThread:85747 [file_pusher.py:finish():177] shutting down file pusher
+2022-02-20 11:38:22,739 INFO    SenderThread:85747 [file_pusher.py:join():182] waiting for file pusher
+2022-02-20 11:38:22,746 INFO    MainThread:85747 [internal.py:handle_exit():79] Internal process exited

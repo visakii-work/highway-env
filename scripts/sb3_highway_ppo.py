@@ -10,8 +10,8 @@ from stable_baselines3.common.env_util import make_vec_env
 from stable_baselines3.common.torch_layers import BaseFeaturesExtractor
 from stable_baselines3.common.vec_env import SubprocVecEnv
 import highway_env
-
-
+from moviepy.editor import ImageSequenceClip
+import imageio
 # ==================================
 #        Main script
 # ==================================
@@ -19,30 +19,45 @@ import highway_env
 if __name__ == "__main__":
     train = True
     if train:
-        n_cpu = 6
+        n_cpu = 4
         batch_size = 64
-        env = make_vec_env("highway-fast-v0", n_envs=n_cpu, vec_env_cls=SubprocVecEnv)
+        env = make_vec_env("roundabout-v0", n_envs=n_cpu, vec_env_cls=SubprocVecEnv)
         model = PPO("MlpPolicy",
                     env,
-                    policy_kwargs=dict(net_arch=[dict(pi=[256, 256], vf=[256, 256])]),
+                    policy_kwargs=dict(net_arch=[dict(pi=[512, 256], vf=[512, 256])]),
                     n_steps=batch_size * 12 // n_cpu,
                     batch_size=batch_size,
-                    n_epochs=10,
-                    learning_rate=5e-4,
-                    gamma=0.8,
+                    n_epochs=30,
+                    learning_rate=1e-3,
+                    gamma=0.99,
                     verbose=2,
                     tensorboard_log="highway_ppo/")
+        
         # Train the agent
-        model.learn(total_timesteps=int(2e4))
+        model.learn(total_timesteps=int(1e5))
         # Save the agent
-        model.save("highway_ppo/model")
+        model.save("highway_ppo_new/model_new_obs")
+        #model 3 - was with distance metric
+        #model 4 - was with no distance metric
+        #model 5 - neg reward
 
-    model = PPO.load("highway_ppo/model")
-    env = gym.make("highway-fast-v0")
-    for _ in range(5):
+
+    model = PPO.load("highway_ppo_new/model_new_obs")
+    env = gym.make("roundabout-v0")
+    #frames = []
+    for i in range(20):
         obs = env.reset()
         done = False
+        frames = []
         while not done:
             action, _ = model.predict(obs)
             obs, reward, done, info = env.step(action)
-            env.render()
+            img = env.render()
+            frames.append(env.render(mode="rgb_array"))
+        
+        #imageio.mimsave("scene"+str(i)+".gif",frames,duration=0.25)
+        clip = ImageSequenceClip(frames, fps=5)
+        clip.write_gif('scene_roundabout' + str(i) + '.gif', fps=5)
+        frames = []
+
+

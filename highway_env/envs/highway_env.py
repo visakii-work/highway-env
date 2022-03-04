@@ -7,6 +7,7 @@ from highway_env.envs.common.action import Action
 from highway_env.road.road import Road, RoadNetwork
 from highway_env.utils import near_split
 from highway_env.vehicle.controller import ControlledVehicle
+from highway_env.vehicle.kinematics import Vehicle
 
 
 class HighwayEnv(AbstractEnv):
@@ -61,14 +62,15 @@ class HighwayEnv(AbstractEnv):
 
         self.controlled_vehicles = []
         for others in other_per_controlled:
-            controlled_vehicle = self.action_type.vehicle_class.create_random(
+            vehicle = Vehicle.create_random(
                 self.road,
                 speed=25,
                 lane_id=self.config["initial_lane_id"],
                 spacing=self.config["ego_spacing"]
             )
-            self.controlled_vehicles.append(controlled_vehicle)
-            self.road.vehicles.append(controlled_vehicle)
+            vehicle = self.action_type.vehicle_class(self.road, vehicle.position, vehicle.heading, vehicle.speed)
+            self.controlled_vehicles.append(vehicle)
+            self.road.vehicles.append(vehicle)
 
             for _ in range(others):
                 vehicle = other_vehicles_type.create_random(self.road, spacing=1 / self.config["vehicles_density"])
@@ -84,7 +86,9 @@ class HighwayEnv(AbstractEnv):
         neighbours = self.road.network.all_side_lanes(self.vehicle.lane_index)
         lane = self.vehicle.target_lane_index[2] if isinstance(self.vehicle, ControlledVehicle) \
             else self.vehicle.lane_index[2]
-        scaled_speed = utils.lmap(self.vehicle.speed, self.config["reward_speed_range"], [0, 1])
+        # Use forward speed rather than speed, see https://github.com/eleurent/highway-env/issues/268
+        forward_speed = self.vehicle.speed * np.cos(self.vehicle.heading)
+        scaled_speed = utils.lmap(forward_speed, self.config["reward_speed_range"], [0, 1])
         reward = \
             + self.config["collision_reward"] * self.vehicle.crashed \
             + self.config["right_lane_reward"] * lane / max(len(neighbours) - 1, 1) \

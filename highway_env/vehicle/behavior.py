@@ -179,7 +179,7 @@ class IDMVehicle(ControlledVehicle):
         - closeness of the target lane;
         - MOBIL model.
         """
-        # If a lane change already ongoing
+        # If a lane change is already ongoing
         if self.lane_index != self.target_lane_index:
             # If we are on correct route but bad lane: abort it if someone else is already changing into the same lane
             if self.lane_index[:2] == self.target_lane_index[:2]:
@@ -204,6 +204,9 @@ class IDMVehicle(ControlledVehicle):
         for lane_index in self.road.network.side_lanes(self.lane_index):
             # Is the candidate lane close enough?
             if not self.road.network.get_lane(lane_index).is_reachable_from(self.position):
+                continue
+            # Only change lane when the vehicle is moving
+            if np.abs(self.speed) < 1:
                 continue
             # Does the MOBIL model recommend a lane change?
             if self.mobil(lane_index):
@@ -230,7 +233,7 @@ class IDMVehicle(ControlledVehicle):
         # Do I have a planned route for a specific lane which is safe for me to access?
         old_preceding, old_following = self.road.neighbour_vehicles(self)
         self_pred_a = self.acceleration(ego_vehicle=self, front_vehicle=new_preceding)
-        if self.route and self.route[0][2]:
+        if self.route and self.route[0][2] is not None:
             # Wrong direction
             if np.sign(lane_index[2] - self.target_lane_index[2]) != np.sign(self.route[0][2] - self.target_lane_index[2]):
                 return False

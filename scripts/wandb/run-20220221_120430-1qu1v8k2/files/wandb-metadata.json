@@ -1,0 +1,22 @@
+{
+    "os": "macOS-11.6-x86_64-i386-64bit",
+    "python": "3.9.9",
+    "heartbeatAt": "2022-02-21T20:04:31.095502",
+    "startedAt": "2022-02-21T20:04:30.248045",
+    "docker": null,
+    "cpu_count": 8,
+    "cuda": null,
+    "args": [],
+    "state": "running",
+    "program": "/Users/visakkumar/Desktop/reactive/highway-env/scripts/sb3_highway_ppo.py",
+    "codePath": "scripts/sb3_highway_ppo.py",
+    "git": {
+        "remote": "git@github.com:eleurent/highway-env.git",
+        "commit": "1a04c6a98be64632cf9683625022023e70ff1ab1"
+    },
+    "email": null,
+    "root": "/Users/visakkumar/Desktop/reactive/highway-env",
+    "host": "TRI-C02CV9JHML85",
+    "username": "visakkumar",
+    "executable": "/Users/visakkumar/Desktop/reactive/react/bin/python3"
+}

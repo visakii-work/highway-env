@@ -3,12 +3,14 @@ from typing import Tuple
 from gym.envs.registration import register
 import numpy as np
 
+from highway_env.envs.common.action import action_factory, Action, DiscreteMetaAction, ActionType
 from highway_env import utils
 from highway_env.envs.common.abstract import AbstractEnv
 from highway_env.road.lane import LineType, StraightLane, CircularLane, SineLane
 from highway_env.road.road import Road, RoadNetwork
 from highway_env.vehicle.controller import MDPVehicle
 
+Observation = np.ndarray
 
 class RoundaboutEnv(AbstractEnv):
 
@@ -17,34 +19,65 @@ class RoundaboutEnv(AbstractEnv):
         config = super().default_config()
         config.update({
             "observation": {
-                "type": "Kinematics",
-                "absolute": True,
-                "features_range": {"x": [-100, 100], "y": [-100, 100], "vx": [-15, 15], "vy": [-15, 15]},
+                "type": "LidarObservation",
+                #"absolute": True,
+                #"features_range": {"x": [-100, 100], "y": [-100, 100], "vx": [-15, 15], "vy": [-15, 15]},
             },
             "action": {
                 "type": "DiscreteMetaAction",
+                "target_speeds": [0,3,6,9,12]
             },
             "incoming_vehicle_destination": None,
-            "collision_reward": -1,
-            "high_speed_reward": 0.2,
+            "collision_reward": -0.1,
+            "high_speed_reward": 0.5,
             "right_lane_reward": 0,
             "lane_change_reward": -0.05,
             "screen_width": 600,
             "screen_height": 600,
             "centering_position": [0.5, 0.6],
-            "duration": 11
+            "duration": 25
         })
         return config
 
-    def _reward(self, action: int) -> float:
+    def _reward(self, action: int, obs: np.ndarray) -> float:
         lane_change = action == 0 or action == 2
+
+        # compute the distance here 
+        col = 0
+        sort_obs = obs[np.argsort(obs[:,col])].copy()
+
+        #print(sort_obs)
+        #pick two closest obstacles
+
+        obstacle_distance = sort_obs[:,col]
+        #1/(1 + e^(-2*dist)) -- 
+        
+        #print(obstacle_distance)
+        
+        distance_metric = 0.
+        for i in range(len(obstacle_distance)):
+            if obstacle_distance[i] <= 0.25:
+                distance_metric += -np.exp(-7.5*obstacle_distance[i])
+
+        #print(distance_metric)
+        #input()
+        acc = (self.vehicle.speed - self.prev_speed)
         reward = self.config["collision_reward"] * self.vehicle.crashed \
-            + self.config["high_speed_reward"] * \
-                 MDPVehicle.get_speed_index(self.vehicle) / max(MDPVehicle.SPEED_COUNT - 1, 1) \
-            + self.config["lane_change_reward"] * lane_change
-        return utils.lmap(reward,
-                          [self.config["collision_reward"] + self.config["lane_change_reward"],
-                           self.config["high_speed_reward"]], [0, 1])
+            + 1*self.vehicle.speed / 12 \
+            + 0*self.config["lane_change_reward"] * lane_change + 1.25*distance_metric - 5e-6*acc
+        
+        
+        self.prev_speed = self.vehicle.speed
+        #print("distance",0.25*distance_metric)
+        #print("high speed reward",self.config["high_speed_reward"] * \
+        #         MDPVehicle.get_speed_index(self.vehicle) / (MDPVehicle.DEFAULT_TARGET_SPEEDS.size - 1))
+        #print("vehicle speed",0.75*self.vehicle.speed/16)
+        #print("reward",reward)
+        #input()
+        rew_max = 1 
+        rew_min = -3
+
+        return (reward - rew_min)/(rew_max - rew_min)
 
     def _is_terminal(self) -> bool:
         """The episode is over when a collision occurs or when the access ramp has been passed."""
@@ -53,6 +86,33 @@ class RoundaboutEnv(AbstractEnv):
     def _reset(self) -> None:
         self._make_road()
         self._make_vehicles()
+        self.prev_speed = 8
+
+    def step(self, action: Action) -> Tuple[Observation, float, bool, dict]:
+        """
+        Perform an action and step the environment dynamics.
+
+        The action is executed by the ego-vehicle, and all other vehicles on the road performs their default behaviour
+        for several simulation timesteps until the next decision making step.
+
+        :param action: the action performed by the ego-vehicle
+        :return: a tuple (observation, reward, terminal, info)
+        """
+        if self.road is None or self.vehicle is None:
+            raise NotImplementedError("The road and vehicle must be initialized in the environment implementation")
+
+        self.steps += 1
+        self._simulate(action)
+
+        obs = self.observation_type.observe()
+        #print(obs)
+        #print(direction)
+        #input()
+        reward = self._reward(action,obs)
+        terminal = self._is_terminal()
+        info = self._info(obs, action)
+
+        return obs, reward, terminal, info
 
     def _make_road(self) -> None:
         # Circle lanes: (s)outh/(e)ast/(n)orth/(w)est (e)ntry/e(x)it.
@@ -136,13 +196,11 @@ class RoundaboutEnv(AbstractEnv):
                                                      ego_lane.position(125, 0),
                                                      speed=8,
                                                      heading=ego_lane.heading_at(140))
+        ego_destinations = ["exr", "nxr"]
         try:
-            ego_vehicle.plan_route_to("nxs")
+            ego_vehicle.plan_route_to(self.np_random.choice(ego_destinations))
         except AttributeError:
             pass
-        MDPVehicle.SPEED_MIN = 0
-        MDPVehicle.SPEED_MAX = 16
-        MDPVehicle.SPEED_COUNT = 3
         self.road.vehicles.append(ego_vehicle)
         self.vehicle = ego_vehicle
 
@@ -152,7 +210,7 @@ class RoundaboutEnv(AbstractEnv):
         vehicle = other_vehicles_type.make_on_lane(self.road,
                                                    ("we", "sx", 1),
                                                    longitudinal=5 + self.np_random.randn()*position_deviation,
-                                                   speed=16 + self.np_random.randn() * speed_deviation)
+                                                   speed=12 + self.np_random.randn() * speed_deviation)
 
         if self.config["incoming_vehicle_destination"] is not None:
             destination = destinations[self.config["incoming_vehicle_destination"]]
@@ -163,11 +221,11 @@ class RoundaboutEnv(AbstractEnv):
         self.road.vehicles.append(vehicle)
 
         # Other vehicles
-        for i in list(range(1, 2)) + list(range(-1, 0)):
+        for i in list(range(1, 3)) + list(range(-1, 0)):
             vehicle = other_vehicles_type.make_on_lane(self.road,
                                                        ("we", "sx", 0),
                                                        longitudinal=20*i + self.np_random.randn()*position_deviation,
-                                                       speed=16 + self.np_random.randn() * speed_deviation)
+                                                       speed=12 + self.np_random.randn() * speed_deviation)
             vehicle.plan_route_to(self.np_random.choice(destinations))
             vehicle.randomize_behavior()
             self.road.vehicles.append(vehicle)
@@ -176,7 +234,7 @@ class RoundaboutEnv(AbstractEnv):
         vehicle = other_vehicles_type.make_on_lane(self.road,
                                                    ("eer", "ees", 0),
                                                    longitudinal=50 + self.np_random.randn() * position_deviation,
-                                                   speed=16 + self.np_random.randn() * speed_deviation)
+                                                   speed=12 + self.np_random.randn() * speed_deviation)
         vehicle.plan_route_to(self.np_random.choice(destinations))
         vehicle.randomize_behavior()
         self.road.vehicles.append(vehicle)

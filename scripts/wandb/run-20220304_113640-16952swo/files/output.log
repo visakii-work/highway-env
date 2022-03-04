@@ -1,0 +1,22 @@
+Traceback (most recent call last):
+  File "/Users/visakkumar/Desktop/reactive/highway-env/scripts/sb3_highway_ppo.py", line 37, in <module>
+    model.learn(total_timesteps=int(1e5))
+  File "/Users/visakkumar/Desktop/reactive/stable-baselines3/stable_baselines3/ppo/ppo.py", line 299, in learn
+    return super(PPO, self).learn(
+  File "/Users/visakkumar/Desktop/reactive/stable-baselines3/stable_baselines3/common/on_policy_algorithm.py", line 250, in learn
+    continue_training = self.collect_rollouts(self.env, callback, self.rollout_buffer, n_rollout_steps=self.n_steps)
+  File "/Users/visakkumar/Desktop/reactive/stable-baselines3/stable_baselines3/common/on_policy_algorithm.py", line 178, in collect_rollouts
+    new_obs, rewards, dones, infos = env.step(clipped_actions)
+  File "/Users/visakkumar/Desktop/reactive/stable-baselines3/stable_baselines3/common/vec_env/base_vec_env.py", line 162, in step
+    return self.step_wait()
+  File "/Users/visakkumar/Desktop/reactive/stable-baselines3/stable_baselines3/common/vec_env/subproc_vec_env.py", line 120, in step_wait
+    results = [remote.recv() for remote in self.remotes]
+  File "/Users/visakkumar/Desktop/reactive/stable-baselines3/stable_baselines3/common/vec_env/subproc_vec_env.py", line 120, in <listcomp>
+    results = [remote.recv() for remote in self.remotes]
+  File "/usr/local/Cellar/python@3.9/3.9.9/Frameworks/Python.framework/Versions/3.9/lib/python3.9/multiprocessing/connection.py", line 255, in recv
+    buf = self._recv_bytes()
+  File "/usr/local/Cellar/python@3.9/3.9.9/Frameworks/Python.framework/Versions/3.9/lib/python3.9/multiprocessing/connection.py", line 419, in _recv_bytes
+    buf = self._recv(4)
+  File "/usr/local/Cellar/python@3.9/3.9.9/Frameworks/Python.framework/Versions/3.9/lib/python3.9/multiprocessing/connection.py", line 388, in _recv
+    raise EOFError
+EOFError

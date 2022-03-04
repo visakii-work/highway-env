@@ -10,6 +10,7 @@ from highway_env.envs.common.graphics import EnvViewer
 from highway_env.road.lane import AbstractLane
 from highway_env.utils import distance_to_circle, Vector
 from highway_env.vehicle.controller import MDPVehicle
+from highway_env.vehicle.kinematics import Vehicle
 
 if TYPE_CHECKING:
     from highway_env.envs.common.abstract import AbstractEnv
@@ -94,7 +95,7 @@ class GrayscaleObservation(ObservationType):
         return self.obs
 
     def _render_to_grayscale(self) -> np.ndarray:
-        # TODO: center rendering on the observer vehicle
+        self.viewer.observer_vehicle = self.observer_vehicle
         self.viewer.display()
         raw_rgb = self.viewer.get_image()  # H x W x C
         raw_rgb = np.moveaxis(raw_rgb, 0, 1)
@@ -185,10 +186,10 @@ class KinematicObservation(ObservationType):
         if not self.features_range:
             side_lanes = self.env.road.network.all_side_lanes(self.observer_vehicle.lane_index)
             self.features_range = {
-                "x": [-5.0 * MDPVehicle.SPEED_MAX, 5.0 * MDPVehicle.SPEED_MAX],
+                "x": [-5.0 * Vehicle.MAX_SPEED, 5.0 * Vehicle.MAX_SPEED],
                 "y": [-AbstractLane.DEFAULT_WIDTH * len(side_lanes), AbstractLane.DEFAULT_WIDTH * len(side_lanes)],
-                "vx": [-2*MDPVehicle.SPEED_MAX, 2*MDPVehicle.SPEED_MAX],
-                "vy": [-2*MDPVehicle.SPEED_MAX, 2*MDPVehicle.SPEED_MAX]
+                "vx": [-2*Vehicle.MAX_SPEED, 2*Vehicle.MAX_SPEED],
+                "vy": [-2*Vehicle.MAX_SPEED, 2*Vehicle.MAX_SPEED]
             }
         for feature, f_range in self.features_range.items():
             if feature in df:
@@ -288,8 +289,8 @@ class OccupancyGridObservation(ObservationType):
         """
         if not self.features_range:
             self.features_range = {
-                "vx": [-2*MDPVehicle.SPEED_MAX, 2*MDPVehicle.SPEED_MAX],
-                "vy": [-2*MDPVehicle.SPEED_MAX, 2*MDPVehicle.SPEED_MAX]
+                "vx": [-2*Vehicle.MAX_SPEED, 2*Vehicle.MAX_SPEED],
+                "vy": [-2*Vehicle.MAX_SPEED, 2*Vehicle.MAX_SPEED]
             }
         for feature, f_range in self.features_range.items():
             if feature in df:
@@ -486,9 +487,24 @@ class MultiAgentObservation(ObservationType):
         return tuple(obs_type.observe() for obs_type in self.agents_observation_types)
 
 
+class TupleObservation(ObservationType):
+    def __init__(self,
+                 env: 'AbstractEnv',
+                 observation_configs: List[dict],
+                 **kwargs) -> None:
+        super().__init__(env)
+        self.observation_types = [observation_factory(self.env, obs_config) for obs_config in observation_configs]
+
+    def space(self) -> spaces.Space:
+        return spaces.Tuple([obs_type.space() for obs_type in self.observation_types])
+
+    def observe(self) -> tuple:
+        return tuple(obs_type.observe() for obs_type in self.observation_types)
+
+
 class ExitObservation(KinematicObservation):
 
-    """Observe the kinematics of nearby vehicles."""
+    """Specific to exit_env, observe the distance to the next exit lane as part of a KinematicObservation."""
 
     def observe(self) -> np.ndarray:
         if not self.env.road:
@@ -532,7 +548,7 @@ class LidarObservation(ObservationType):
     SPEED = 1
 
     def __init__(self, env,
-                 cells: int = 16,
+                 cells: int = 32,
                  maximum_range: float = 60,
                  normalize: bool = True,
                  **kwargs):
@@ -542,51 +558,72 @@ class LidarObservation(ObservationType):
         self.normalize = normalize
         self.angle = 2 * np.pi / self.cells
         self.grid = np.ones((self.cells, 1)) * float('inf')
+        self.direction = np.ones((self.cells, 1)) * float('inf')
         self.origin = None
 
     def space(self) -> spaces.Space:
         high = 1 if self.normalize else self.maximum_range
-        return spaces.Box(shape=(self.cells, 2), low=-high, high=high, dtype=np.float32)
+        return spaces.Box(shape=(self.cells, 5), low=-high, high=high, dtype=np.float32)
 
     def observe(self) -> np.ndarray:
-        obs = self.trace(self.observer_vehicle.position, self.observer_vehicle.velocity).copy()
+        observe,direction = self.trace(self.observer_vehicle.position, self.observer_vehicle.velocity)
+        obs = observe.copy()
+        direct = direction.copy()
         if self.normalize:
             obs /= self.maximum_range
+            direct /= self.maximum_range
+
+        total_obs = np.column_stack((obs,direct))
+        #print(total_obs.shape)
         return obs
+
 
     def trace(self, origin: np.ndarray, origin_velocity: np.ndarray) -> np.ndarray:
         self.origin = origin.copy()
-        self.grid = np.ones((self.cells, 2)) * self.maximum_range
+        self.grid = np.ones((self.cells, 5)) * self.maximum_range
+        self.direction = np.ones((self.cells,2))*self.maximum_range
 
+        direction_vectors = []
         for obstacle in self.env.road.vehicles + self.env.road.objects:
-            if obstacle is self.observer_vehicle:
+            if obstacle is self.observer_vehicle or not obstacle.solid:
                 continue
             center_distance = np.linalg.norm(obstacle.position - origin)
+            direction_vectors.append(obstacle.position - origin)
             if center_distance > self.maximum_range:
                 continue
             center_angle = self.position_to_angle(obstacle.position, origin)
-            half_angle = np.arccos(np.sqrt(max(1-(obstacle.WIDTH / 2 / center_distance)**2, 0)))
             center_index = self.angle_to_index(center_angle)
-            # self.grid[center_index, self.DISTANCE] = min(self.grid[center_index, self.DISTANCE], )
             distance = center_distance - obstacle.WIDTH / 2
             if distance <= self.grid[center_index, self.DISTANCE]:
                 direction = self.index_to_direction(center_index)
-                velocity = (obstacle.velocity - origin_velocity).dot(direction)
-                self.grid[center_index, :] = [distance, velocity]
+                velocity = (obstacle.velocity - origin_velocity)#.dot(direction)
+                self.direction[center_index,:] = [direction[0],direction[1]]
+                self.grid[center_index, :] = [distance,direction[0], direction[1],velocity[0],velocity[1]]
 
-            start, end = self.angle_to_index(center_angle - half_angle), self.angle_to_index(center_angle + half_angle)
+            # Angular sector covered by the obstacle
+            corners = utils.rect_corners(obstacle.position, obstacle.LENGTH, obstacle.WIDTH, obstacle.heading)
+            angles = [self.position_to_angle(corner, origin) for corner in corners]
+            min_angle, max_angle = min(angles), max(angles)
+            start, end = self.angle_to_index(min_angle), self.angle_to_index(max_angle)
             if start < end:
                 indexes = np.arange(start, end+1)
             else:
                 indexes = np.hstack([np.arange(start, self.cells), np.arange(0, end + 1)])
 
+            # Actual distance computation for these sections
+            
             for index in indexes:
                 direction = self.index_to_direction(index)
-                distance = distance_to_circle(obstacle.position - origin, obstacle.WIDTH / 2, direction)
+                ray = [origin, origin + self.maximum_range * direction]
+                distance = utils.distance_to_rect(ray, corners)
                 if distance <= self.grid[index, self.DISTANCE]:
-                    velocity = (obstacle.velocity - origin_velocity).dot(direction)
-                    self.grid[index, :] = [distance, velocity]
-        return self.grid
+                    velocity = (obstacle.velocity - origin_velocity)#.dot(direction)
+                    self.direction[index,:] = [direction[0],direction[1]]
+                    self.grid[index, :] = [distance,direction[0], direction[1],velocity[0],velocity[1]]
+
+        #print(self.direction)
+
+        return self.grid,self.direction 
 
     def position_to_angle(self, position: np.ndarray, origin: np.ndarray) -> float:
         return np.arctan2(position[1] - origin[1], position[0] - origin[0]) + self.angle/2
@@ -598,7 +635,7 @@ class LidarObservation(ObservationType):
         return int(np.floor(angle / self.angle)) % self.cells
 
     def index_to_direction(self, index: int) -> np.ndarray:
-        return np.array([[np.cos(index * self.angle)], [np.sin(index * self.angle)]])
+        return np.array([np.cos(index * self.angle), np.sin(index * self.angle)])
 
 
 def observation_factory(env: 'AbstractEnv', config: dict) -> ObservationType:
@@ -616,6 +653,8 @@ def observation_factory(env: 'AbstractEnv', config: dict) -> ObservationType:
         return AttributesObservation(env, **config)
     elif config["type"] == "MultiAgentObservation":
         return MultiAgentObservation(env, **config)
+    elif config["type"] == "TupleObservation":
+        return TupleObservation(env, **config)
     elif config["type"] == "LidarObservation":
         return LidarObservation(env, **config)
     elif config["type"] == "ExitObservation":
