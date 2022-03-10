@@ -214,7 +214,7 @@ class AbstractEnv(gym.Env):
         self.steps += 1
         self._simulate(action)
 
-        obs = self.observation_type.observe()
+        obs = self.observation_type.observe(self.vehicles[0])
         reward = self._reward(action)
         terminal = self._is_terminal()
         info = self._info(obs, action)

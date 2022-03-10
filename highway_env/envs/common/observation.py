@@ -565,7 +565,8 @@ class LidarObservation(ObservationType):
         high = 1 if self.normalize else self.maximum_range
         return spaces.Box(shape=(self.cells, 5), low=-high, high=high, dtype=np.float32)
 
-    def observe(self) -> np.ndarray:
+    def observe(self,) -> np.ndarray:
+        #self.observer_vehicle = vehicle
         observe,direction = self.trace(self.observer_vehicle.position, self.observer_vehicle.velocity)
         obs = observe.copy()
         direct = direction.copy()
@@ -573,8 +574,9 @@ class LidarObservation(ObservationType):
             obs /= self.maximum_range
             direct /= self.maximum_range
 
-        total_obs = np.column_stack((obs,direct))
-        #print(total_obs.shape)
+        #total_obs = np.column_stack((obs,direct))
+        #print(obs.shape)
+        #input()
         return obs
 
 
@@ -594,6 +596,8 @@ class LidarObservation(ObservationType):
             center_angle = self.position_to_angle(obstacle.position, origin)
             center_index = self.angle_to_index(center_angle)
             distance = center_distance - obstacle.WIDTH / 2
+            #print(self.DISTANCE)
+            #input()
             if distance <= self.grid[center_index, self.DISTANCE]:
                 direction = self.index_to_direction(center_index)
                 velocity = (obstacle.velocity - origin_velocity)#.dot(direction)

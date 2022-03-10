@@ -101,6 +101,7 @@ class Vehicle(RoadObject):
 
         :param action: the input action
         """
+    
         if action:
             self.action = action
 
