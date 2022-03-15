@@ -14,14 +14,15 @@ from moviepy.editor import ImageSequenceClip
 import imageio
 import matplotlib.pyplot as plt
 import time
+from multiprocessing import cpu_count
 # ==================================
 #        Main script
 # ==================================
 
 if __name__ == "__main__":
-    train = False
+    train = True
     if train:
-        n_cpu = 16
+        n_cpu = cpu_count()
         batch_size = 256
         env = make_vec_env("roundabout-v0", n_envs=n_cpu, vec_env_cls=SubprocVecEnv)
         model = PPO("MlpPolicy",
