@@ -243,8 +243,8 @@ def attention(query, key, value, mask=None, dropout=None):
 
 attention_network_kwargs = dict(
     in_size=5*15,
-    embedding_layer_kwargs={"in_size": 7, "layer_sizes": [64, 64], "reshape": False},
-    attention_layer_kwargs={"feature_size": 64, "heads": 2},
+    embedding_layer_kwargs={"in_size": 5, "layer_sizes": [128, 128], "reshape": False},
+    attention_layer_kwargs={"feature_size": 128, "heads": 2},
 )
 
 
@@ -306,27 +306,29 @@ env_kwargs = {
 if __name__ == "__main__":
     train = True
     if train:
-        n_cpu = 4
+        n_cpu = 16
         policy_kwargs = dict(
             features_extractor_class=CustomExtractor,
             features_extractor_kwargs=attention_network_kwargs,
         )
-        env = make_vec_env(make_configure_env, n_envs=n_cpu, seed=0, vec_env_cls=SubprocVecEnv, env_kwargs=env_kwargs)
+        #env = make_vec_env(make_configure_env, n_envs=n_cpu, seed=0, vec_env_cls=SubprocVecEnv, env_kwargs=env_kwargs)
+        env = make_vec_env("roundabout-v0", n_envs=n_cpu, vec_env_cls=SubprocVecEnv)
+        batch_size = 256
         model = PPO("MlpPolicy", env,
-                    n_steps=512 // n_cpu,
-                    batch_size=64,
-                    learning_rate=2e-3,
+                    n_steps=batch_size*12 // n_cpu,
+                    batch_size=batch_size,
+                    learning_rate=1e-3,
                     policy_kwargs=policy_kwargs,
                     verbose=2,
                     tensorboard_log="highway_attention_ppo/")
         # Train the agent
         model.learn(total_timesteps=200*1000)
         # Save the agent
-        model.save("highway_attention_ppo/model")
+        model.save("highway_attention_ppo/model_attention")
 
-    model = PPO.load("highway_attention_ppo/model")
-    env = make_configure_env(**env_kwargs)
-    for _ in range(5):
+    model = PPO.load("highway_attention_ppo/model_attention")
+    env = gym.make("roundabout-v0")
+    for _ in range(50):
         obs = env.reset()
         done = False
         while not done:

@@ -19,9 +19,9 @@ import imageio
 if __name__ == "__main__":
     train = False
     if train:
-        n_cpu = 4
+        n_cpu = 1
         batch_size = 64
-        env = make_vec_env("roundabout-v0", n_envs=n_cpu, vec_env_cls=SubprocVecEnv)
+        env = gym.make("roundabout-v1")#make_vec_env("roundabout-v1", n_envs=n_cpu, vec_env_cls=SubprocVecEnv)
         model = PPO("MlpPolicy",
                     env,
                     policy_kwargs=dict(net_arch=[dict(pi=[512, 256], vf=[512, 256])]),
@@ -34,22 +34,28 @@ if __name__ == "__main__":
                     tensorboard_log="highway_ppo/")
         
         # Train the agent
+        model.set_parameters("highway_ppo_new/model_new_obs_crowded_m1")
         model.learn(total_timesteps=int(1e5))
         # Save the agent
-        model.save("highway_ppo_new/model_new_obs_crowded")
+
+        model.save("highway_ppo_new/model_new_obs_crowded_m2")
         #model 3 - was with distance metric
         #model 4 - was with no distance metric
         #model 5 - neg reward
 
-
-    model = PPO.load("highway_ppo_new/model_new_obs_crowdedd")
+    #model_new_obs_exp1_seed_3_b256_8cars_512t256_randomvehicles_4hz_binary2
+    model = PPO.load("highway_ppo_new/model_new_obs_crowded_m2")
     env = gym.make("roundabout-v1")
     crash_count = 0
     #frames = []
-    for i in range(20):
+    
+    render = False
+    for i in range(500):
+        print("iter",i)
         obs = env.reset()
         done = False
         frames = []
+
         while not done:
             actions = []
             if type(obs) != list:
@@ -63,17 +69,18 @@ if __name__ == "__main__":
             #print(actions)
             #input()
             obs, reward, done, info = env.step(actions)
-            img = env.render()
-            frames.append(env.render(mode="rgb_array"))
+            if render:
+                img = env.render()
+                frames.append(env.render(mode="rgb_array"))
 
             if info["crashed"]:
                 crash_count+=1
 
-
-        #imageio.mimsave("scene"+str(i)+".gif",frames,duration=0.25)
-        clip = ImageSequenceClip(frames, fps=5)
-        clip.write_gif('scene_roundabout' + str(i) + '.gif', fps=5)
-        frames = []
+        if render:
+            #imageio.mimsave("scene"+str(i)+".gif",frames,duration=0.25)
+            clip = ImageSequenceClip(frames, fps=5)
+            clip.write_gif('scene_roundaboutss' + str(i) + '.gif', fps=5)
+            frames = []
 
     print("crash rate :",crash_count)
 

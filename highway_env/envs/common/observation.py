@@ -548,7 +548,7 @@ class LidarObservation(ObservationType):
     SPEED = 1
 
     def __init__(self, env,
-                 cells: int = 32,
+                 cells: int = 16,
                  maximum_range: float = 60,
                  normalize: bool = True,
                  **kwargs):
@@ -563,7 +563,7 @@ class LidarObservation(ObservationType):
 
     def space(self) -> spaces.Space:
         high = 1 if self.normalize else self.maximum_range
-        return spaces.Box(shape=(self.cells, 5), low=-high, high=high, dtype=np.float32)
+        return spaces.Box(shape=(10, 5), low=-high, high=high, dtype=np.float32)
 
     def observe(self,) -> np.ndarray:
         #self.observer_vehicle = vehicle
@@ -576,8 +576,10 @@ class LidarObservation(ObservationType):
 
         #total_obs = np.column_stack((obs,direct))
         #print(obs.shape)
+        col = 0
+        sort_obs = obs[np.argsort(obs[:,col])].copy()
         #input()
-        return obs
+        return obs[:10,:]
 
 
     def trace(self, origin: np.ndarray, origin_velocity: np.ndarray) -> np.ndarray:
