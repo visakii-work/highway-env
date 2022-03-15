@@ -39,7 +39,7 @@ if __name__ == "__main__":
         # Train the agent
         model.learn(total_timesteps=int(1.5e5))
         # Save the agent
-        model.save("highway_ppo_new/model_new_obs_exp1_seed_3_b256_8cars_512t256_randomvehicles_4hz_binary2")
+        model.save("highway_ppo_new/model_latest_1") #model_latest - 0.50 treshold, model_latest - 0.3 threshold
         #model 3 - was with distance metric
         #model 4 - was with no distance metric best until now - model_new_obs_exp1_seed_3_b256_8cars
         #model 5 - neg reward not bad model_new_obs_exp1_seed_3_b256_8cars_512t256_randomvehicles_4hz_binary
@@ -47,7 +47,7 @@ if __name__ == "__main__":
     render = False
     reward_plot = False
 
-    model = PPO.load("highway_ppo_new/model_new_obs_exp1_seed_3_b256_8cars_512t256_randomvehicles_4hz_binary2")
+    model = PPO.load("highway_ppo_new/model_latest_1")
     env = gym.make("roundabout-v0")
     if reward_plot:
         plt.ion()
@@ -55,7 +55,7 @@ if __name__ == "__main__":
         figure,ax = plt.subplots(figsize=(5,4))
     #frames = []
     crash_count = 0
-    for i in range(100):
+    for i in range(500):
         print("test :",i)
         obs = env.reset()
         done = False
@@ -132,7 +132,7 @@ if __name__ == "__main__":
             clip.write_gif('scene_roundabout_cr' + str(i) + '.gif', fps=5)
             frames = []
 
-    print("crash rate :",crash_count)
+    print("crash rate :",crash_count*(100/500))
 
 
 

@@ -27,12 +27,12 @@ class RoundaboutEnv(AbstractEnv):
             },
             "action": {
                 "type": "DiscreteMetaAction",
-                "target_speeds": [-5,0,5,10]#[-2,0,4,8,10]
+                "target_speeds": [-10,0,5,10]#[-2,0,4,8,10]
             },
             "simulation_frequency": 18,  # [Hz]
             "policy_frequency": 3,  # [Hz]
             "incoming_vehicle_destination": None,
-            "collision_reward": -20.0,
+            "collision_reward": -10.0,
             "high_speed_reward": 0.5,
             "right_lane_reward": 0,
             "lane_change_reward": -2.0,
@@ -77,7 +77,7 @@ class RoundaboutEnv(AbstractEnv):
         self.obstacle_distance = obstacle_distances_grouped
         self.distance_per_bin = [0]*len(obstacle_distances_grouped)
         for i in range(len(obstacle_distances_grouped)):
-            if obstacle_distances_grouped[i] <= 0.50:
+            if obstacle_distances_grouped[i] <= 0.30:
                 penalty = -np.exp(-6.5*obstacle_distances_grouped[i])
                 self.distance_per_bin[i] = penalty
                 distance_metric += penalty
