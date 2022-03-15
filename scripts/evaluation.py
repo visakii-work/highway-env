@@ -36,7 +36,7 @@ class Evaluation():
         t = 0
         frames = []
         if render:
-            env.render()
+            self.env.render()
 
         while not done:
             t += 1
