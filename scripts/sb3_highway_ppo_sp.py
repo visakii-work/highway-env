@@ -34,20 +34,20 @@ if __name__ == "__main__":
                     tensorboard_log="highway_ppo/")
         
         # Train the agent
-        model.set_parameters("highway_ppo_new/model_new_obs_crowded_m1")
+        model.set_parameters("highway_ppo_new/model_PPO_test2")
         model.learn(total_timesteps=int(1e5))
         # Save the agent
 
-        model.save("highway_ppo_new/model_new_obs_crowded_m2")
+        model.save("highway_ppo_new/model_PPO_sp")
         #model 3 - was with distance metric
         #model 4 - was with no distance metric
         #model 5 - neg reward
 
     #model_new_obs_exp1_seed_3_b256_8cars_512t256_randomvehicles_4hz_binary2
-    model = PPO.load("highway_ppo_new/model_new_obs_crowded_m2")
+    model = PPO.load("highway_ppo_new/model_PPO_test4")
     env = gym.make("roundabout-v1")
     crash_count = 0
-    #frames = []
+    #frames = [
     
     render = False
     for i in range(500):

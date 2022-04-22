@@ -5,6 +5,7 @@ import gym
 from gym import Wrapper
 from gym.utils import seeding
 import numpy as np
+import pickle as pkl
 
 from highway_env import utils
 from highway_env.envs.common.action import action_factory, Action, DiscreteMetaAction, ActionType
@@ -66,6 +67,8 @@ class AbstractEnv(gym.Env):
         self._monitor = None
         self.rendering_mode = 'human'
         self.enable_auto_render = False
+
+        self.int_states = pkl.load(open("interesting_states_20_node0.pkl","rb"))
 
         self.reset()
 

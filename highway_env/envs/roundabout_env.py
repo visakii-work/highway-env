@@ -29,17 +29,17 @@ class RoundaboutEnv(AbstractEnv):
                 "type": "DiscreteMetaAction",
                 "target_speeds": [-10,0,5,10]#[-2,0,4,8,10]
             },
-            "simulation_frequency": 18,  # [Hz]
-            "policy_frequency": 3,  # [Hz]
+            "simulation_frequency": 20,  # [Hz]
+            "policy_frequency": 5,  # [Hz]
             "incoming_vehicle_destination": None,
-            "collision_reward": -10.0,
+            "collision_reward": -5.0,
             "high_speed_reward": 0.5,
             "right_lane_reward": 0,
-            "lane_change_reward": -2.0,
+            "lane_change_reward": -1.0,
             "screen_width": 600,
             "screen_height": 600,
             "centering_position": [0.5, 0.6],
-            "duration":40,
+            "duration": 100,
         })
         return config
 
@@ -77,8 +77,8 @@ class RoundaboutEnv(AbstractEnv):
         self.obstacle_distance = obstacle_distances_grouped
         self.distance_per_bin = [0]*len(obstacle_distances_grouped)
         for i in range(len(obstacle_distances_grouped)):
-            if obstacle_distances_grouped[i] <= 0.30:
-                penalty = -np.exp(-6.5*obstacle_distances_grouped[i])
+            if obstacle_distances_grouped[i] <= 0.15:
+                penalty = -np.exp(-8.5*obstacle_distances_grouped[i])
                 self.distance_per_bin[i] = penalty
                 distance_metric += penalty
 
@@ -89,20 +89,19 @@ class RoundaboutEnv(AbstractEnv):
         #    + 1*self.vehicle.speed / 12 \
         #    + 0.5*self.config["lane_change_reward"] * lane_change + 1.5*distance_metric - 5e-6*acc**2
         
+        
         next_target = self.road.network.next_lane(self.vehicle.target_lane_index,
                                                                  route=self.vehicle.route,
                                                                  position=self.vehicle.position,
                                                                  np_random=self.road.np_random)
 
-        #print("target position for vehicle",self.road.network.get_lane(next_target).position(0,0))
-        #print("current position of the vehicle",self.vehicle.position)
-        #input()model_new_obs_exp1_seed_3_b256_8cars_512t256_randomvehicles_4hz_binary
         
         waypoint_target = self.road.network.get_lane(next_target).position(0,0)
 
         current_vehicle_position = self.vehicle.position
-
+        
         distance_to_waypoint = np.linalg.norm(waypoint_target - current_vehicle_position)
+        
         self.position_reward = np.exp(-0.05*distance_to_waypoint)
 
         #print("position reward",self.position_reward)
@@ -111,7 +110,7 @@ class RoundaboutEnv(AbstractEnv):
         self.collision_rew = self.config["collision_reward"] * self.vehicle.crashed 
         self.speed_rew =   1.0*self.vehicle.speed / 10  #np.exp(-2*(8-self.vehicle.speed)**2)    #1.0*np.exp(-0.02*(self.vehicle.speed-12)**2) #
         self.lane_change_rew = 1*self.config["lane_change_reward"] * lane_change
-        self.obstacle_dist_rew = 0.5*distance_metric #this was 1.75 and the speed targets was different,policy was different 
+        self.obstacle_dist_rew = 0.05*distance_metric #this was 1.75 and the speed targets was different,policy was different 
         self.acc_rew = -2e-3*(acc)**2
         self.alive = 0        
         
@@ -167,8 +166,30 @@ class RoundaboutEnv(AbstractEnv):
         terminal = self._is_terminal()
         #sort_obs = obs[np.argsort(obs[:,col])].copy()
         
-        #obstacle_distance = sort_obs[:,col]
+        #obstacle_distance = sort_obs[:,col]local_coordinates
 
+        #print("lane index of ego",self.road.vehicles[0].lane_index)
+
+        longi,lati = self.road.network.get_lane(self.road.vehicles[0].lane_index).local_coordinates(self.road.vehicles[0].position)
+        #print("position",longi)
+
+        #input()
+        vehicle_info = {}
+        for i in range(len(self.road.vehicles)):
+            vehicle_info[i] = {}
+            lane_ind = self.road.vehicles[i].lane_index
+            global_pos = self.road.vehicles[i].position
+            vehicle_info[i]['lane_index'] = lane_ind #tuple
+            vehicle_info[i]['long_lat'] = self.road.network.get_lane(lane_ind).local_coordinates(global_pos) #tuple
+            vehicle_info[i]['speed'] = self.road.vehicles[i].speed
+            vehicle_info[i]['heading'] = self.road.vehicles[i].heading
+
+
+        #print(vehicle_info)
+        #input()
+
+
+        #lane_index, (longi,lati), speed, 
 
         info = {
             "speed": self.vehicle.speed,
@@ -179,6 +200,8 @@ class RoundaboutEnv(AbstractEnv):
             "reward_terms":self.reward_terms,
             "distance_per_bin":self.distance_per_bin,
             "obstacle_distance":self.obstacle_distance,
+            "vehicle_info":vehicle_info,
+
         }
         
         try:
@@ -262,66 +285,135 @@ class RoundaboutEnv(AbstractEnv):
 
         :return: the ego-vehicle
         """
-        position_deviation = 2
-        speed_deviation = 2
 
-        # Ego-vehicle
-        ego_start = ["n","e","w","s"]
-        ego_start_loc = self.np_random.choice(ego_start)
+        state_dist = False
+        '''
+        {0: {'lane_index': ('ner', 'nes', 0), 'long_lat': (126.64697685863153, -0.021527970168557342), 'speed': 8.587866512345679, 'heading': 1.564392878403743},
+         1: {'lane_index': ('we', 'sx', 1), 'long_lat': (4.803448740037574, -0.07179657666076977), 'speed': 8.827490960791954, 'heading': 0.9813873215906727},
+          2: {'lane_index': ('sx', 'se', 0), 'long_lat': (8.959073647639073, -0.09036344090350923), 'speed': 9.485544382347758, 'heading': 0.008649689790597766}, 
+          3: {'lane_index': ('se', 'ex', 0), 'long_lat': (10.469507170465873, -0.09608281517337858), 'speed': 10.540648386232846, 'heading': -0.9011740464507881},
+           4: {'lane_index': ('ee', 'nx', 0), 'long_lat': (0.48715100100533704, -0.09050459899146901), 'speed': 8.71928896211554, 'heading': -1.9764593400512407},
+            5: {'lane_index': ('nx', 'ne', 0), 'long_lat': (0.7402067078250685, -0.09714875561542513), 'speed': 10.76674789257683, 'heading': -2.717804026888118},
+        6: {'lane_index': ('ne', 'wx', 0), 'long_lat': (6.690383822428849, 0.1297199819060566), 'speed': 4.926107332246248, 'heading': -3.894171801394659}, 
+        7: {'lane_index': ('ne', 'wx', 0), 'long_lat': (12.693932210636492, 0.1903866114920696), 'speed': 10.313043849115356, 'heading': 2.236180093296049},
+        8: {'lane_index': ('eer', 'ees', 0), 'long_lat': (51.999806920632324, 0.0), 'speed': 9.216797153048407, 'heading': 3.141592653589793}}
 
-        ego_lane = self.road.network.get_lane((ego_start_loc+"er", ego_start_loc+"es", 0))
-        ego_vehicle = self.action_type.vehicle_class(self.road,
+        
+        self.int_states = [{0: {'lane_index': ('ner', 'nes', 0), 'long_lat': (126.64697685863153, -0.021527970168557342), 'speed': 8.587866512345679, 'heading': 1.564392878403743},
+         1: {'lane_index': ('we', 'sx', 1), 'long_lat': (4.803448740037574, -0.07179657666076977), 'speed': 8.827490960791954, 'heading': 0.9813873215906727},
+          2: {'lane_index': ('sx', 'se', 0), 'long_lat': (8.959073647639073, -0.09036344090350923), 'speed': 9.485544382347758, 'heading': 0.008649689790597766}, 
+          3: {'lane_index': ('se', 'ex', 0), 'long_lat': (10.469507170465873, -0.09608281517337858), 'speed': 10.540648386232846, 'heading': -0.9011740464507881},
+           4: {'lane_index': ('ee', 'nx', 0), 'long_lat': (0.48715100100533704, -0.09050459899146901), 'speed': 8.71928896211554, 'heading': -1.9764593400512407},
+            5: {'lane_index': ('nx', 'ne', 0), 'long_lat': (0.7402067078250685, -0.09714875561542513), 'speed': 10.76674789257683, 'heading': -2.717804026888118},
+        6: {'lane_index': ('ne', 'wx', 0), 'long_lat': (6.690383822428849, 0.1297199819060566), 'speed': 4.926107332246248, 'heading': -3.894171801394659}, 
+        7: {'lane_index': ('ne', 'wx', 0), 'long_lat': (12.693932210636492, 0.1903866114920696), 'speed': 10.313043849115356, 'heading': 2.236180093296049},
+        8: {'lane_index': ('eer', 'ees', 0), 'long_lat': (51.999806920632324, 0.0), 'speed': 9.216797153048407, 'heading': 3.141592653589793}}]
+        '''
+        index = np.random.randint(low=0,high=len(self.int_states))
+
+        #print(self.int_states[index])
+        #input()
+        target_speeds = [-10,0,5,10]
+
+        if state_dist:
+
+            #ego_vehicle 
+            ego_vehicle_class = MDPVehicle(self.road,
+                                            position = [0,0],
+                                            target_speeds=target_speeds)
+
+            ego_lane = self.road.network.get_lane(self.int_states[index][0]['lane_index'])
+            longi = self.int_states[index][0]['long_lat'][0]
+            lati = self.int_states[index][0]['long_lat'][1]
+            ego_vehicle = self.action_type.vehicle_class(self.road,
+                                                        ego_lane.position(longi,lati),
+                                                        speed = self.int_states[index][0]['speed'],
+                                                        heading=ego_lane.heading_at(self.int_states[index][0]['heading']))
+
+            ego_destinations = ["exr", "nxr", "wxr","sxr"]
+            try:
+                dest = self.np_random.choice(ego_destinations)
+                ego_vehicle.plan_route_to(dest)
+            except AttributeError:
+                pass
+            self.road.vehicles.append(ego_vehicle)
+            self.vehicle = ego_vehicle
+            ego_dest_pos = self.road.network.get_lane((dest[0]+"xs",dest,0)).position(0,0)
+
+            destinations = ["exr", "sxr", "nxr"]
+            other_vehicles_type = utils.class_from_path(self.config["other_vehicles_type"])
+            for i in range(1,8):
+                vehicle = other_vehicles_type.make_on_lane(self.road,
+                                                            self.int_states[index][i]['lane_index'],
+                                                            longitudinal= self.int_states[index][i]['long_lat'][0],
+                                                            speed = self.int_states[index][i]['speed'])
+
+                destination = self.np_random.choice(destinations)
+                vehicle.plan_route_to(destination)
+                vehicle.randomize_behavior()
+                self.road.vehicles.append(vehicle)
+
+        else:
+            position_deviation = 2
+            speed_deviation = 2
+
+            # Ego-vehicle
+            ego_start = ["n","e","w","s"]
+            ego_start_loc = self.np_random.choice(ego_start)
+
+            ego_lane = self.road.network.get_lane((ego_start_loc+"er", ego_start_loc+"es", 0))
+            ego_vehicle = self.action_type.vehicle_class(self.road,
                                                      ego_lane.position(125, 0),
                                                      speed=8,
                                                      heading=ego_lane.heading_at(140))
-        ego_destinations = ["exr", "nxr", "wxr","sxr"]
-        try:
-            dest = self.np_random.choice(ego_destinations)
-            ego_vehicle.plan_route_to(dest)
-        except AttributeError:
-            pass
-        self.road.vehicles.append(ego_vehicle)
-        self.vehicle = ego_vehicle
+            ego_destinations = ["exr", "nxr", "wxr","sxr"]
+            try:
+                dest = self.np_random.choice(ego_destinations)
+                ego_vehicle.plan_route_to(dest)
+            except AttributeError:
+                pass
+            self.road.vehicles.append(ego_vehicle)
+            self.vehicle = ego_vehicle
 
-        ego_dest_pos = self.road.network.get_lane((dest[0]+"xs",dest,0)).position(0,0)
-        #print("ego position in world coordinates",ego_dest_pos)
-        #print("destination",dest)
+            ego_dest_pos = self.road.network.get_lane((dest[0]+"xs",dest,0)).position(0,0)
+            #print("ego position in world coordinates",ego_dest_pos)
+            #print("destination",dest)
         
 
-        # Incoming vehicle
-        destinations = ["exr", "sxr", "nxr"]
-        other_vehicles_type = utils.class_from_path(self.config["other_vehicles_type"])
-        vehicle = other_vehicles_type.make_on_lane(self.road,
+            # Incoming vehicle
+            destinations = ["exr", "sxr", "nxr"]
+            other_vehicles_type = utils.class_from_path(self.config["other_vehicles_type"])
+            vehicle = other_vehicles_type.make_on_lane(self.road,
                                                    ("we", "sx", 1),
                                                    longitudinal=5 + self.np_random.randn()*position_deviation,
                                                    speed=10 + self.np_random.randn() * speed_deviation)
 
-        if self.config["incoming_vehicle_destination"] is not None:
-            destination = destinations[self.config["incoming_vehicle_destination"]]
-        else:
-            destination = self.np_random.choice(destinations)
-        vehicle.plan_route_to(destination)
-        vehicle.randomize_behavior()
-        self.road.vehicles.append(vehicle)
-
-        # Other vehicles
-        for i in list(range(1, 5)) + list(range(-1, 0)):
-            vehicle = other_vehicles_type.make_on_lane(self.road,
-                                                       ("we", "sx", 0),
-                                                       longitudinal=20*i + self.np_random.randn()*position_deviation,
-                                                       speed= 10 + self.np_random.randn() * speed_deviation)
-            vehicle.plan_route_to(self.np_random.choice(destinations))
+            if self.config["incoming_vehicle_destination"] is not None:
+                destination = destinations[self.config["incoming_vehicle_destination"]]
+            else:
+                destination = self.np_random.choice(destinations)
+            vehicle.plan_route_to(destination)
             vehicle.randomize_behavior()
             self.road.vehicles.append(vehicle)
 
-        # Entering vehicle
-        vehicle = other_vehicles_type.make_on_lane(self.road,
+            # Other vehicles
+            for i in list(range(1, 6)) + list(range(-1, 0)):
+                vehicle = other_vehicles_type.make_on_lane(self.road,
+                                                       ("we", "sx", 0),
+                                                       longitudinal=20*i + self.np_random.randn()*position_deviation,
+                                                       speed= 10 + self.np_random.randn() * speed_deviation)
+                vehicle.plan_route_to(self.np_random.choice(destinations))
+                vehicle.randomize_behavior()
+                self.road.vehicles.append(vehicle)
+
+            # Entering vehicle
+            vehicle = other_vehicles_type.make_on_lane(self.road,
                                                    ("eer", "ees", 0),
                                                    longitudinal=50 + self.np_random.randn() * position_deviation,
                                                    speed=10 + self.np_random.randn() * speed_deviation)
-        vehicle.plan_route_to(self.np_random.choice(destinations))
-        vehicle.randomize_behavior()
-        self.road.vehicles.append(vehicle)
+            vehicle.plan_route_to(self.np_random.choice(destinations))
+            vehicle.randomize_behavior()
+            self.road.vehicles.append(vehicle)
 
 
 
@@ -340,10 +432,10 @@ class RoundaboutEnv_SP(AbstractEnv):
             },
             "action": {
                 "type": "DiscreteMetaAction",
-                "target_speeds": [-5,0,5,10]#[-2,0,4,8,10]
+                "target_speeds": [-10,0,5,10]#[-2,0,4,8,10]
             },
-            "simulation_frequency": 18,  # [Hz]
-            "policy_frequency": 3,  # [Hz]
+            "simulation_frequency": 20,  # [Hz]
+            "policy_frequency": 5,  # [Hz]
             "incoming_vehicle_destination": None,
             "collision_reward": -20.0,
             "high_speed_reward": 0.5,
@@ -352,7 +444,7 @@ class RoundaboutEnv_SP(AbstractEnv):
             "screen_width": 600,
             "screen_height": 600,
             "centering_position": [0.5, 0.6],
-            "duration":40,
+            "duration":70,
         })
         return config
 
@@ -390,8 +482,8 @@ class RoundaboutEnv_SP(AbstractEnv):
         self.obstacle_distance = obstacle_distances_grouped
         self.distance_per_bin = [0]*len(obstacle_distances_grouped)
         for i in range(len(obstacle_distances_grouped)):
-            if obstacle_distances_grouped[i] <= 0.50:
-                penalty = -np.exp(-6.5*obstacle_distances_grouped[i])
+            if obstacle_distances_grouped[i] <= 0.20:
+                penalty = -np.exp(-7.5*obstacle_distances_grouped[i])
                 self.distance_per_bin[i] = penalty
                 distance_metric += penalty
 
@@ -406,7 +498,7 @@ class RoundaboutEnv_SP(AbstractEnv):
                                                                  route=self.vehicle.route,
                                                                  position=self.vehicle.position,
                                                                  np_random=self.road.np_random)
-        
+
         #print("target position for vehicle",self.road.network.get_lane(next_target).position(0,0))
         #print("current position of the vehicle",self.vehicle.position)
         #input()model_new_obs_exp1_seed_3_b256_8cars_512t256_randomvehicles_4hz_binary
@@ -588,19 +680,13 @@ class RoundaboutEnv_SP(AbstractEnv):
         obs_list.extend(obs_agents)
 
         
-
-        
-
-            #print(agent_rewards)
-            #input()
-        
         reward = self._reward(action,obs)
         agent_rewards = [reward]
 
 
 
         if len(action) != 1:
-            for i in range(1,self.num_agents):
+            for i in range(1,5):
                 agent_rewards.append(self._compute_agent_rewards(obs_list[i],action[i],i))
 
         terminal = self._is_terminal()
@@ -612,8 +698,14 @@ class RoundaboutEnv_SP(AbstractEnv):
         info = self._info(obs, action)
 
         #print("agent rewards",agent_rewards)
+        #np.asarray(agent_rewards[:self.num_agents])
+
+        print("obs list shape",len(obs_list))
+        print("reward list shape",len(agent_rewards))
         
-        return obs_list, np.asarray(agent_rewards[:self.num_agents]), terminal, info
+        input()
+        
+        return obs_list, reward, terminal, info
 
     def get_lidar_obs_agent(self,):
         lidar_obs_list = []
@@ -621,7 +713,7 @@ class RoundaboutEnv_SP(AbstractEnv):
         self.cells = 16
         self.angle = 2 * np.pi / self.cells
         self.DISTANCE = 0
-        for item in self.road.vehicles[1:]:
+        for item in self.road.vehicles[1:4]:
             observer_vehicle = item
             origin = item.position
             grid = np.ones((self.cells, 5)) * maximum_range
@@ -778,14 +870,14 @@ class RoundaboutEnv_SP(AbstractEnv):
         self.road.vehicles.append(ego_vehicle)
         self.vehicle = ego_vehicle
 
-        ts = [-5,0,5,10]
-        self.num_agents = 5
+        ts = [-10,0,5,10]
+        self.num_agents = 3
         # Incoming vehicle
         v1_start = ["n","e","w","s"]
         v1_start_loc = self.np_random.choice(v1_start)
 
         v1_lane = self.road.network.get_lane(("ner", "nes", 0))
-        destinations = ["exr", "sxr", "nxr"]
+        destinations = ["exr", "sxr"]
         other_vehicles_type = utils.class_from_path(self.config["other_vehicles_type"])
         vehicle = self.action_type.vehicle_class(self.road,
                                                    v1_lane.position(100, 0),
@@ -807,7 +899,7 @@ class RoundaboutEnv_SP(AbstractEnv):
 
         v2_lane = self.road.network.get_lane(("se", "ex", 0))
         vehicle = self.action_type.vehicle_class(self.road,
-                                                   v2_lane.position(0, 0),
+                                                   v2_lane.position(10, 0),
                                                    #longitudinal=5 + self.np_random.randn()*position_deviation,
                                                    speed=8 + self.np_random.randn() * speed_deviation,
                                                    target_speeds=ts)
@@ -824,13 +916,52 @@ class RoundaboutEnv_SP(AbstractEnv):
         v3_start = ["n","e","w","s"]
         v3_start_loc = self.np_random.choice(v3_start)
 
-        v3_lane = self.road.network.get_lane(("we", "sx", 0))
+        v3_lane = self.road.network.get_lane(("wer", "wes", 0))
         vehicle = self.action_type.vehicle_class(self.road,
-                                                   v3_lane.position(10, 0),
+                                                   v3_lane.position(100, 0),
                                                    #longitudinal=5 + self.np_random.randn()*position_deviation,
                                                    speed=8 + self.np_random.randn() * speed_deviation,
                                                    target_speeds=ts)
 
+        self.road.vehicles.append(vehicle)
+
+
+        v3_start = ["n","e","w","s"]
+        v3_start_loc = self.np_random.choice(v3_start)
+
+        v3_lane = self.road.network.get_lane(("eer", "ees", 0))
+        vehicle = self.action_type.vehicle_class(self.road,
+                                                   v3_lane.position(100, 0),
+                                                   #longitudinal=5 + self.np_random.randn()*position_deviation,
+                                                   speed=8 + self.np_random.randn() * speed_deviation,
+                                                   target_speeds=ts)
+
+        self.road.vehicles.append(vehicle)
+        '''
+        v3_start = ["n","e","w","s"]
+        v3_start_loc = self.np_random.choice(v3_start)
+
+        v3_lane = self.road.network.get_lane(("ne", "wx", 0))
+        vehicle = self.action_type.vehicle_class(self.road,
+                                                   v3_lane.position(0, 0),
+                                                   #longitudinal=5 + self.np_random.randn()*position_deviation,
+                                                   speed=8 + self.np_random.randn() * speed_deviation,
+                                                   target_speeds=ts)
+
+        #self.road.vehicles.append(vehicle)
+
+
+        v3_start = ["n","e","w","s"]
+        v3_start_loc = self.np_random.choice(v3_start)
+
+        v3_lane = self.road.network.get_lane(("we", "sx", 0))
+        vehicle = self.action_type.vehicle_class(self.road,
+                                                   v3_lane.position(0, 0),
+                                                   #longitudinal=5 + self.np_random.randn()*position_deviation,
+                                                   speed=8 + self.np_random.randn() * speed_deviation,
+                                                   target_speeds=ts)
+
+        
         if self.config["incoming_vehicle_destination"] is not None:
             destination = destinations[self.config["incoming_vehicle_destination"]]
         else:
@@ -847,7 +978,7 @@ class RoundaboutEnv_SP(AbstractEnv):
                                                    #longitudinal=5 + self.np_random.randn()*position_deviation,
                                                    speed=8 + self.np_random.randn() * speed_deviation,
                                                    target_speeds=ts)
-
+        
         if self.config["incoming_vehicle_destination"] is not None:
             destination = destinations[self.config["incoming_vehicle_destination"]]
         else:
@@ -857,8 +988,8 @@ class RoundaboutEnv_SP(AbstractEnv):
         
         self.road.vehicles.append(vehicle)
         # Other vehicles
-
-        '''
+        
+        
         for i in list(range(-1, 0))+ list(range(1, 2)):
             vehicle = other_vehicles_type.make_on_lane(self.road,
                                                        ("wx", "we", 0),
@@ -877,8 +1008,9 @@ class RoundaboutEnv_SP(AbstractEnv):
         vehicle.randomize_behavior()
         self.road.vehicles.append(vehicle)
         
-        
-        for i in list(range(-1, 0))+ list(range(1, 2)):
+        '''
+
+        for i in list(range(-1, 0))+ list(range(1, 3)):
             vehicle = other_vehicles_type.make_on_lane(self.road,
                                                        ("wx", "we", 0),
                                                        longitudinal=20*i + self.np_random.randn()*position_deviation,
@@ -886,7 +1018,7 @@ class RoundaboutEnv_SP(AbstractEnv):
             vehicle.plan_route_to(self.np_random.choice(destinations))
             vehicle.randomize_behavior()
             self.road.vehicles.append(vehicle)
-        '''
+        
         # Entering vehicle
         vehicle = other_vehicles_type.make_on_lane(self.road,
                                                    ("eer", "ees", 0),
